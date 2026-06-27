@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -18,15 +19,27 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     [Header("Create Room Panel")]
     public GameObject CreateRoomUIPanel;
+    public InputField RoomNameInputField;
+    public string GameMode;
 
     [Header("Creating Room Info Panel")]
     public GameObject CreatingRoomInfoUIPanel;
 
     [Header("Inside Room Panel")]
     public GameObject InsideRoomUIPanel;
+    public Text RoomInfoText;
+    public GameObject PlayerListPrefab;
+    public GameObject PlayerListContent;
+    public GameObject StartGameButton;
+    public Text GameModeText;
+    public Image PanelBackground;
+    public Sprite RacingBackground;
+    public Sprite DeathRaceBackground;
 
     [Header("Join Random Room Panel")]
     public GameObject JoinRandomRoomUIPanel;
+
+    private Dictionary<int, GameObject> playerListGameObjects;
 
     #region Unity Methods
 
@@ -34,6 +47,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void Start()
     {
         ActivatePanel(LoginUIPanel.name);
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     // Update is called once per frame
@@ -61,6 +75,73 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             Debug.Log("Player name is invalid");
         }   
     }
+
+    public void OnCancelButtonClicked()
+    {
+        ActivatePanel(GameOptionsUIPanel.name);
+    }
+    public void OnCreateRoomButtonClicked()
+    {
+        ActivatePanel(CreatingRoomInfoUIPanel.name);
+        if (GameMode != null)
+        {
+            string roomName = RoomNameInputField.text;
+            if (string.IsNullOrEmpty(roomName))
+            {
+                roomName = "Room" + Random.Range(1000, 10000);
+            }
+            RoomOptions roomOptions = new RoomOptions();
+            roomOptions.MaxPlayers = 3;
+
+            // the following string is used to introduce game mode
+            string[] roomPropsInLobby = { "gm" }; //gm = game mode
+                                                  //two game modes
+                                                  //1. racing = "rc"
+                                                  //2. death race = "dr"
+
+            ExitGames.Client.Photon.Hashtable customRoomProperties = new
+                ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };
+
+            roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;
+            roomOptions.CustomRoomProperties = customRoomProperties;
+
+            // in order to use this, we need to use photon's realtime library
+            PhotonNetwork.CreateRoom(roomName, roomOptions);
+        }
+    }
+    public void OnJoinRandomRoomButtonClicked(string _gameMode)
+    {
+        GameMode = _gameMode;
+        ExitGames.Client.Photon.Hashtable expectedCustomRoomProperties = new
+            ExitGames.Client.Photon.Hashtable() { { "gm", _gameMode } };
+        PhotonNetwork.JoinRandomRoom(expectedCustomRoomProperties, 0);
+    }
+    public void OnBackButtonClicked()
+    {
+        ActivatePanel(GameOptionsUIPanel.name);
+    }
+
+    public void OnLeaveGameButtonClicked()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
+
+    public void OnStartGameButtonClicked()
+    {
+        if(PhotonNetwork.CurrentRoom.CustomProperties.ContainsKey("gm"))
+        {
+            if(PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("rc"))
+            {
+                //Racing game mode
+                PhotonNetwork.LoadLevel("RacingScene");
+            }
+            else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("dr"))
+            {
+                //death race mode
+                PhotonNetwork.LoadLevel("DeathRaceScene");
+            }
+        }
+    }
 #endregion
 
 #region Photon Callbacks
@@ -74,7 +155,135 @@ public override void OnConnectedToMaster()
         ActivatePanel(GameOptionsUIPanel.name);
         Debug.Log(PhotonNetwork.LocalPlayer.NickName + " is connected to Photon.");
 }
-#endregion
+    public override void OnCreatedRoom()
+    {
+        Debug.Log(PhotonNetwork.CurrentRoom.Name + " is created");
+    }
+    public override void OnJoinedRoom()
+    {
+        Debug.Log(PhotonNetwork.LocalPlayer.NickName + " joined to " + PhotonNetwork.CurrentRoom.Name + "Player count: " + PhotonNetwork.CurrentRoom.PlayerCount);
+        ActivatePanel(InsideRoomUIPanel.name);
+
+        if(PhotonNetwork.CurrentRoom.CustomProperties.ContainsKey("gm"))
+        {
+            RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name + "" + "Players/Max.Players: " + PhotonNetwork.CurrentRoom.PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
+            
+            if(PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("rc"))
+            {
+                //Racing game mode
+                GameModeText.text = "LETS RACE!";
+                PanelBackground.sprite = RacingBackground;
+            }
+            else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("dr"))
+            {
+                //Death race game mode
+                GameModeText.text = "DEATH RACE!";
+                PanelBackground.sprite = DeathRaceBackground;
+            }
+
+            if(playerListGameObjects == null)
+            {
+                playerListGameObjects = new Dictionary<int, GameObject>();
+            }
+            foreach (Player player in PhotonNetwork.PlayerList)
+            {
+                GameObject playerListGameObject = Instantiate(PlayerListPrefab);
+                playerListGameObject.transform.SetParent(PlayerListContent.transform);
+                playerListGameObject.transform.localScale = Vector3.one;
+                playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(player.ActorNumber, player.NickName);
+
+                object isPlayerReady;
+                if (player.CustomProperties.TryGetValue(MultiplayerRacingGame.PLAYER_READY, out isPlayerReady))
+                {
+                    playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
+                }
+                playerListGameObjects.Add(player.ActorNumber, playerListGameObject);
+            }
+        }
+        StartGameButton.SetActive(false);
+    }
+    public override void OnPlayerPropertiesUpdate(Player target, ExitGames.Client.Photon.Hashtable changedProps)
+    {
+        GameObject playerListGameObject;
+        if(playerListGameObjects.TryGetValue(target.ActorNumber, out playerListGameObject))
+        {
+            object isPlayerReady;
+            if(changedProps.TryGetValue(MultiplayerRacingGame.PLAYER_READY, out isPlayerReady))
+            {
+                playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
+            }
+        }
+        StartGameButton.SetActive(CheckPlayersReady());
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name + " " + "Players/Max Players: " +
+            PhotonNetwork.CurrentRoom.PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
+        GameObject playerListGameObject = Instantiate(PlayerListPrefab);
+        playerListGameObject.transform.SetParent(PlayerListContent.transform);
+        playerListGameObject.transform.localScale = Vector3.one;
+        playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(newPlayer.ActorNumber, newPlayer.NickName);
+        playerListGameObjects.Add(newPlayer.ActorNumber, playerListGameObject);
+
+        StartGameButton.SetActive(CheckPlayersReady());
+    }
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name + " " + "Players/Max Players: " +
+           PhotonNetwork.CurrentRoom.PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
+        Destroy(playerListGameObjects[otherPlayer.ActorNumber].gameObject);
+        playerListGameObjects.Remove(otherPlayer.ActorNumber);
+
+        StartGameButton.SetActive(CheckPlayersReady());
+    }
+    public override void OnLeftRoom()
+    {
+        ActivatePanel(GameOptionsUIPanel.name);
+        foreach (GameObject playerListGameobject in playerListGameObjects.Values)
+        {
+            Destroy(playerListGameobject);
+        }
+        playerListGameObjects.Clear();
+        playerListGameObjects = null;
+    }
+    public override void OnMasterClientSwitched(Player newMasterClient)
+    {
+        if(PhotonNetwork.LocalPlayer.ActorNumber == newMasterClient.ActorNumber)
+        {
+            StartGameButton.SetActive(CheckPlayersReady());
+        }
+    }
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        Debug.Log(message);
+        //if there is no room, create one
+        if(GameMode != null)
+        {
+            string roomName = RoomNameInputField.text;
+            if(string.IsNullOrEmpty(roomName))
+            {
+                roomName = "Room" + Random.Range(1000, 10000);
+            }
+            RoomOptions roomOptions = new RoomOptions();
+            roomOptions.MaxPlayers = 3;
+
+            // the following string is used to introduce game mode
+            string[] roomPropsInLobby = { "gm" }; //gm = game mode
+                                                  //two game modes
+                                                  //1. racing = "rc"
+                                                  //2. death race = "dr"
+
+            ExitGames.Client.Photon.Hashtable customRoomProperties = new
+                ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };
+            roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;
+            roomOptions.CustomRoomProperties = customRoomProperties;
+            PhotonNetwork.CreateRoom(roomName, roomOptions);
+        }
+    }
+    #endregion
+
+    #region Public Methods
     public void ActivatePanel(string panelNameToBeActivated)
     {
         LoginUIPanel.SetActive(LoginUIPanel.name.Equals(panelNameToBeActivated));
@@ -83,5 +292,38 @@ public override void OnConnectedToMaster()
         CreateRoomUIPanel.SetActive(CreateRoomUIPanel.name.Equals(panelNameToBeActivated));
        GameOptionsUIPanel.SetActive(GameOptionsUIPanel.name.Equals(panelNameToBeActivated));
         JoinRandomRoomUIPanel.SetActive(JoinRandomRoomUIPanel.name.Equals(panelNameToBeActivated));
+        InsideRoomUIPanel.SetActive(InsideRoomUIPanel.name.Equals(panelNameToBeActivated));
     }
+
+    public void SetGameMode (string _gameMode)
+    {
+        GameMode = _gameMode;
+    }
+    #endregion
+
+    #region Private Methods
+    private bool CheckPlayersReady()
+    {
+        if(!PhotonNetwork.IsMasterClient)
+        {
+            return false;
+        }
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            object isPlayerReady;
+            if(player.CustomProperties.TryGetValue(MultiplayerRacingGame.PLAYER_READY, out isPlayerReady))
+            {
+                if(!(bool)isPlayerReady)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    #endregion
 }
