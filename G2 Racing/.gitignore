@@ -1,0 +1,19 @@
+# Unity缓存
+Library/
+Temp/
+Obj/
+Logs/
+Build/
+UserSettings/
+*.log
+
+# VS缓存与工程文件
+.vs/
+*.sln
+*.csproj
+*.user
+*.suo
+
+# 系统文件
+Thumbs.db
+.DS_Store
