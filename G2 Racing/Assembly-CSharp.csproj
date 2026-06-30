@@ -77,6 +77,10 @@
     <Compile Include="Assets\Scripts\MultiplayerRacingGame.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
+    <Compile Include="Assets\Alkoryn Studios\Free Vehicles Pack\Demo\First Person\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Alkoryn Studios\Free Vehicles Pack\Demo\First Person\Scripts\CameraLook.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\MovementController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
