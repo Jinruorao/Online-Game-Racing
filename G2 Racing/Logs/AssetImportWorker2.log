@@ -1,0 +1,303 @@
+Using pre-set license
+Built from '2022.1/staging' branch; Version is '2022.1.24f1 (709dddfb713f) revision 7380445'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 28416 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2022.1.24f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/wilbe/OneDrive/Documents/GitHub/Online-Game-Racing/G2 Racing
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+59276
+Successfully changed project path to: C:/Users/wilbe/OneDrive/Documents/GitHub/Online-Game-Racing/G2 Racing
+C:/Users/wilbe/OneDrive/Documents/GitHub/Online-Game-Racing/G2 Racing
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 148.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.1.24f1 (709dddfb713f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2022.1.24f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/wilbe/OneDrive/Documents/GitHub/Online-Game-Racing/G2 Racing/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) 780M (ID=0x1900)
+    Vendor:   ATI
+    VRAM:     14208 MB
+    Driver:   32.0.13058.1006
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2022.1.24f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2022.1.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity 2022.1.24f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2022.1.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006773 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 145.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.177 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1177ms)
+		BeginReloadAssembly (128ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (868ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (193ms)
+				TypeCache.Initialize (192ms)
+					TypeCache.ScanAssembly (190ms)
+				ResolveRequiredComponents (1ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (519ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (14ms)
+				RefreshPlugins (146ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (255ms)
+				ProcessInitializeOnLoadMethodAttributes (88ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.013035 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\wilbe\OneDrive\Documents\GitHub\Online-Game-Racing\G2 Racing\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\wilbe\OneDrive\Documents\GitHub\Online-Game-Racing\G2 Racing\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.902 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1903ms)
+		BeginReloadAssembly (206ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (1490ms)
+			LoadAssemblies (160ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (504ms)
+				TypeCache.Initialize (495ms)
+					TypeCache.ScanAssembly (488ms)
+				ResolveRequiredComponents (9ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (91ms)
+			SetupLoadedEditorAssemblies (652ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (12ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (134ms)
+				ProcessInitializeOnLoadAttributes (451ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 1.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3600 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (58.7 KB). Loaded Objects now: 4058.
+Memory consumption went from 0.54 GB to 0.54 GB.
+Total: 6.531700 ms (FindLiveObjects: 0.453800 ms CreateObjectMapping: 0.128600 ms MarkObjects: 5.794700 ms  DeleteObjects: 0.152800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1554113.748453 seconds.
+  path: Assets/Materials/Car1.mat
+  artifactKey: Guid(7dde059139185ea43ab9e65d90f591a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Car1.mat using Guid(7dde059139185ea43ab9e65d90f591a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7f33abb029f4d63985065be36c45366') in 0.723368 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Materials/CarMuscle.mat
+  artifactKey: Guid(a3e7d91925314ab40b8691dc03a2484f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/CarMuscle.mat using Guid(a3e7d91925314ab40b8691dc03a2484f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eadb5b844b1fc7f33820a4305d47e316') in 0.098451 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Materials/WeaponLaser.mat
+  artifactKey: Guid(c5adf176350d20a4a9a765cd0f5b838e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/WeaponLaser.mat using Guid(c5adf176350d20a4a9a765cd0f5b838e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2068e206f82b65f3f5674fb241c46ab2') in 0.161691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Materials/Car3.mat
+  artifactKey: Guid(d4bc580e3902bd94e9b71ab38dd80027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Car3.mat using Guid(d4bc580e3902bd94e9b71ab38dd80027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f064312408b7229e24f67ab80120d78') in 0.053435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Materials/FinishFlag.mat
+  artifactKey: Guid(f0f724ebbfde3c247a37da0a40c4061b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/FinishFlag.mat using Guid(f0f724ebbfde3c247a37da0a40c4061b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '355e992a8aaf5d655fda12bdd1de65fb') in 0.035358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Materials/Car5.mat
+  artifactKey: Guid(10a432d7ec20114428474f0e546641aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Car5.mat using Guid(10a432d7ec20114428474f0e546641aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b707d00b0ff652fc3253bf137289770') in 0.098453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Materials/LaserMat.mat
+  artifactKey: Guid(4c8c689c0095b724c91681a1e0b9b15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/LaserMat.mat using Guid(4c8c689c0095b724c91681a1e0b9b15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c16fe5f079276cbdefcd77f62afcc53') in 0.161675 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.624984 seconds.
+  path: Assets/Prefabs/DeathPanel.prefab
+  artifactKey: Guid(9bfb0f188d017884ca4192b2ecb55586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DeathPanel.prefab using Guid(9bfb0f188d017884ca4192b2ecb55586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e7d348e43788d86d4baf9021a0be2b') in 0.048411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Prefabs/PlayerUI.prefab
+  artifactKey: Guid(4bd428c2ac09a6c4591748cb20f2badf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerUI.prefab using Guid(4bd428c2ac09a6c4591748cb20f2badf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5966faacc0e5f604fda7620ccdb550e5') in 0.128405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Prefabs/Rocket.prefab
+  artifactKey: Guid(2f77b45aab7070c4aad64a0699fbb716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Rocket.prefab using Guid(2f77b45aab7070c4aad64a0699fbb716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e699934e1856334f8d0466ab6692fe1') in 0.331971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.194308 seconds.
+  path: Assets/Scenes/RacingScene.unity
+  artifactKey: Guid(7843b4af5b53323488164a379316bd10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/RacingScene.unity using Guid(7843b4af5b53323488164a379316bd10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9c684bceed579d1a319a977ed6b38e3') in 0.019191 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.221534 seconds.
+  path: Assets/Scenes/LobbyScene.unity
+  artifactKey: Guid(3adb158719a2fde47b23f83f67d010c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/LobbyScene.unity using Guid(3adb158719a2fde47b23f83f67d010c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b41e7e3c35f802b17aa93a280f7aa62') in 0.024144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 64.230681 seconds.
+  path: Assets/KarenAssets
+  artifactKey: Guid(36b88509a70686d4cb16a8daad1ea273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets using Guid(36b88509a70686d4cb16a8daad1ea273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70dad908839390c6bd4f9b76581e9df1') in 0.023769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 156.607443 seconds.
+  path: Assets/KarenAssets/Sonic Break.png
+  artifactKey: Guid(b87ba5199558b4f48b1de475fe826626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/Sonic Break.png using Guid(b87ba5199558b4f48b1de475fe826626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec0b533dd71b977b71f3d43d190895d4') in 0.215999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.844843 seconds.
+  path: Assets/KarenAssets/fonts
+  artifactKey: Guid(a7dc7bcff779d5f43b734e205dba7430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/fonts using Guid(a7dc7bcff779d5f43b734e205dba7430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f781873be28544d09db6f26b2c88c93') in 0.018627 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.975068 seconds.
+  path: Assets/KarenAssets/fonts/Cinzel-Black.otf
+  artifactKey: Guid(14b0dd83163432f41a40ed90af41f7aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/fonts/Cinzel-Black.otf using Guid(14b0dd83163432f41a40ed90af41f7aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '797503349df7aec74f003c7f5da55a0a') in 0.069761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/KarenAssets/fonts/CinzelDecorative-Regular.otf
+  artifactKey: Guid(b3278fd5681c61149a5e294f17e4de7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/fonts/CinzelDecorative-Regular.otf using Guid(b3278fd5681c61149a5e294f17e4de7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd981103b38edfbd071c7589177e3392') in 0.084261 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/KarenAssets/fonts/CinzelDecorative-Bold.otf
+  artifactKey: Guid(be9d3eefeae5f4248a0f955889c784ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/fonts/CinzelDecorative-Bold.otf using Guid(be9d3eefeae5f4248a0f955889c784ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '047dbd10bb384b8445a6f79f8ec12c74') in 0.048005 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.440144 seconds.
+  path: Assets/KarenAssets/fonts/GAME_glm.ttf
+  artifactKey: Guid(3152110938373e14abe9262a3588f9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/fonts/GAME_glm.ttf using Guid(3152110938373e14abe9262a3588f9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2b43f5c94d2e4e6f7d778204570c557') in 0.050883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.167100 seconds.
+  path: Assets/KarenAssets/fonts/Cinzel-Bold SDF.asset
+  artifactKey: Guid(f6c018c2baf162e41b6d70bd49ec53c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/fonts/Cinzel-Bold SDF.asset using Guid(f6c018c2baf162e41b6d70bd49ec53c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad3db2272d73d117378f38032cc68263') in 0.070398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/KarenAssets/fonts/CinzelDecorative-Black SDF.asset
+  artifactKey: Guid(3e4cbee50912845469fda3dccd5efc88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/fonts/CinzelDecorative-Black SDF.asset using Guid(3e4cbee50912845469fda3dccd5efc88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be1b8a793ac44145d6f3f40deee7b5f4') in 0.052111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/KarenAssets/fonts/GAME_glm SDF.asset
+  artifactKey: Guid(4c71fe9e5b5048842b7778eff92704d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarenAssets/fonts/GAME_glm SDF.asset using Guid(4c71fe9e5b5048842b7778eff92704d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f64e694aeff630377bbef53c76843f1f') in 0.047318 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
