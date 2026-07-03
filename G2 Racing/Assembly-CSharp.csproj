@@ -62,14 +62,18 @@
     <Compile Include="Assets\Scripts\PlayerSetup.cs" />
     <Compile Include="Assets\Scripts\PlayerListEntryInitializer.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Scripts\TimeCountDownManager.cs" />
+    <Compile Include="Assets\Alkoryn Studios\Free Vehicles Pack\Demo\First Person\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\LapController.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
     <Compile Include="Assets\Scripts\PlayerSelection.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\Scripts\RacingModeGameManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
+    <Compile Include="Assets\Scripts\MovementController.cs" />
+    <Compile Include="Assets\Alkoryn Studios\Free Vehicles Pack\Demo\First Person\Scripts\CameraLook.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\Scripts\NetworkManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
@@ -77,10 +81,6 @@
     <Compile Include="Assets\Scripts\MultiplayerRacingGame.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
-    <Compile Include="Assets\Alkoryn Studios\Free Vehicles Pack\Demo\First Person\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Alkoryn Studios\Free Vehicles Pack\Demo\First Person\Scripts\CameraLook.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\MovementController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
