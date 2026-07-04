@@ -393,6 +393,7 @@
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CarMovement.cs"
+"Assets/Scripts/ExplosionBomb.cs"
 "Assets/Scripts/LapController.cs"
 "Assets/Scripts/MovementController.cs"
 "Assets/Scripts/MultiplayerRacingGame.cs"
@@ -401,6 +402,8 @@
 "Assets/Scripts/PlayerSelection.cs"
 "Assets/Scripts/PlayerSetup.cs"
 "Assets/Scripts/RacingModeGameManager.cs"
+"Assets/Scripts/RespawnSystem.cs"
+"Assets/Scripts/Shield.cs"
 "Assets/Scripts/TimeCountDownManager.cs"
 -langversion:9.0
 

@@ -25,6 +25,10 @@ public class MovementController : MonoBehaviour
     public int tapsForRoll = 4;
     public float groundLostDelay = 0.5f;
 
+    [Header("=== 加速系统 ===")]
+    public float baseForwardSpeed = 50f;        // 基础速度
+    public float currentSpeedMultiplier = 1f;   // 当前速度倍率
+
     private Rigidbody rb;
     private float currentYaw = 0f;
     private float currentYawVelocity = 0f;
@@ -262,5 +266,10 @@ public class MovementController : MonoBehaviour
             Gizmos.DrawWireSphere(transform.position + Vector3.down * groundCheckDistance, 0.2f);
             Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
         }
+    }
+
+    public void ResetSpeedMultiplier()
+    {
+        currentSpeedMultiplier = 1f;
     }
 }
