@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|d:\\github\\online-game-racing\\g2 racing\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|D:\\GitHub\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\PlayerSelection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerSelection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,9 +32,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovementController.cs",
               "ToolTip": "D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\MovementController.cs",
               "RelativeToolTip": "Assets\\Scripts\\MovementController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAswGoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAYwNcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T09:21:10.963Z",
+              "WhenOpened": "2026-07-02T09:42:38.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerSelection.cs",
+              "DocumentMoniker": "D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\PlayerSelection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerSelection.cs",
+              "ToolTip": "D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\PlayerSelection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerSelection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T06:38:57.589Z",
               "EditorCaption": ""
             },
             {
@@ -43,8 +60,7 @@
               "RelativeToolTip": "Assets\\Scripts\\CameraFollow.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T09:20:37.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-02T09:20:37.137Z"
             }
           ]
         }
