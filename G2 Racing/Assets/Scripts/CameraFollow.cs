@@ -2,55 +2,32 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-<<<<<<< HEAD
+
+
     [Header("è·Ÿéšå‚æ•°")]
     public Transform target;
-    public Vector3 offset = new Vector3(0, 5f, -10f);
+    public Vector3 offset = new Vector3(0, 5f, -10f);  // ï¿½ï¿½Ô·É´ï¿½ï¿½ï¿½Æ«ï¿½Æ£ï¿½ï¿½ï¿½10ï¿½×£ï¿½ï¿½Ï·ï¿½5ï¿½×£ï¿½
 
-    [Header("å¹³æ»‘å‚æ•°")]
-    public float smoothSpeed = 0.15f;
-
-    private Vector3 velocity = Vector3.zero;
-=======
-    [Header("¸úËæ²ÎÊý")]
-    public Transform target;
-    public Vector3 offset = new Vector3(0, 5f, -10f);  // Ïà¶Ô·É´¬µÄÆ«ÒÆ£¨ºó·½10Ã×£¬ÉÏ·½5Ã×£©
-
-    [Header("Æ½»¬²ÎÊý")]
+    [Header("Æ½å¹³æ»‘å‚æ•°)]
     public float positionSmoothSpeed = 0.15f;
     public float rotationSmoothSpeed = 0.12f;
 
     private Vector3 positionVelocity = Vector3.zero;
     private float rotationVelocity = 0f;
->>>>>>> origin/JIN10086
+
 
     void LateUpdate()
     {
         if (target == null) return;
 
-<<<<<<< HEAD
 
-        Vector3 targetPosition = target.position + target.rotation * offset;
 
-        transform.position = Vector3.SmoothDamp(
-            transform.position,
-            targetPosition,
-            ref velocity,
-            smoothSpeed
-        );
 
-        transform.LookAt(target);
-    }
-}
-=======
-        // === 1. ¼ÆËãÄ¿±êÎ»ÖÃ ===
-        // »ñÈ¡·É´¬µÄYÖáÐý×ª£¨ºöÂÔ·­¹öºÍ¸©Ñö£©
+
         Quaternion targetYawRotation = Quaternion.Euler(0f, target.eulerAngles.y, 0f);
 
-        // Æ«ÒÆÁ¿Ö»Ó¦ÓÃYÖáÐý×ª£¬ÕâÑùÉãÏñ»úÊ¼ÖÕÔÚ·É´¬Æ¨¹ÉºóÃæ
         Vector3 targetPosition = target.position + targetYawRotation * offset;
 
-        // Æ½»¬ÒÆ¶¯µ½Ä¿±êÎ»ÖÃ
         transform.position = Vector3.SmoothDamp(
             transform.position,
             targetPosition,
@@ -58,7 +35,7 @@ public class CameraFollow : MonoBehaviour
             positionSmoothSpeed
         );
 
-        // === 2. Ðý×ª¸úËæ£¨Ö»¸úËæYÖá£© ===
+
         float targetYaw = target.eulerAngles.y;
 
         float smoothYaw = Mathf.SmoothDampAngle(
@@ -68,7 +45,7 @@ public class CameraFollow : MonoBehaviour
             rotationSmoothSpeed
         );
 
-        // ÉãÏñ»ú±£³ÖË®Æ½£¬Ö»¸Ä±äYÖáÐý×ª
+
         transform.rotation = Quaternion.Euler(0f, smoothYaw, 0f);
     }
 }

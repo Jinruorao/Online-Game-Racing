@@ -1,30 +1,4 @@
-<<<<<<< HEAD
-using UnityEngine;
-using Photon.Pun;
-using Photon.Realtime;
 
-public class MovementController : MonoBehaviourPun, IPunObservable
-{
-    [Header("飞行参数")]
-    public float forwardSpeed = 50f;
-    public float turnRate = 120f;
-
-    [Header("转向平滑")]
-    public float turnSmoothTime = 0.08f;
-
-    [Header("上下浮动")]
-    public float floatAmplitude = 0.2f;
-    public float floatSpeed = 2f;
-
-    [Header("倾斜效果")]
-    public float maxRollAngle = 25f;
-    public float rollSmoothTime = 0.1f;
-    public float rollReturnSpeed = 3f;
-
-    [Header("网络插值速度")]
-    public float networkLerpSpeed = 12f; // 位置跟随速度
-    public float networkRotLerpSpeed = 12f; // 旋转跟随速度
-=======
 ﻿using UnityEngine;
 
 public class MovementController : MonoBehaviour
@@ -55,32 +29,27 @@ public class MovementController : MonoBehaviour
     [Header("=== 加速系统 ===")]
     public float baseForwardSpeed = 50f;        // 基础速度
     public float currentSpeedMultiplier = 1f;   // 当前速度倍率
->>>>>>> origin/JIN10086
+
+
+    public float maxRollAngle = 25f;        // 最大倾斜角度
+    public float rollSmoothTime = 0.1f;     // 倾斜平滑速度
+    public float rollReturnSpeed = 3f;      // 回正速度
+
 
     private Rigidbody rb;
     private float currentYaw = 0f;
     private float currentYawVelocity = 0f;
-<<<<<<< HEAD
+
     private Vector3 startPosition;
     private float timeOffset;
-=======
->>>>>>> origin/JIN10086
 
-    private float currentRoll = 0f;
-    private float targetRoll = 0f;
+
+    private float currentRoll = 0f;          // 当前倾斜角度
+    private float targetRoll = 0f;           // 目标倾斜角度
     private float rollVelocity = 0f;
 
-<<<<<<< HEAD
-    // ---------- 网络同步专用变量 ----------
-    private Vector3 networkTargetPosition;
-    private float networkTargetYaw;
-    private float networkTargetRoll;
 
-    // 用于SmoothDamp的临时速度（引用传递）
-    private Vector3 networkPosVelocity = Vector3.zero;
-    private float networkYawVelocity = 0f;
-    private float networkRollVelocity = 0f;
-=======
+
     // 高度相关
     private float currentHeightVelocity = 0f;
     private bool hasGround = false;
@@ -94,44 +63,27 @@ public class MovementController : MonoBehaviour
     private float lastInputTime = 0f;
     private float inputCooldown = 0.2f;
     private bool hasTriggeredGroundRoll = false;
->>>>>>> origin/JIN10086
 
+
+
+=======
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-<<<<<<< HEAD
-
-        // 如果不是本地玩家，冻结物理模拟以减少性能开销（但仍保留碰撞）
-        if (!photonView.IsMine)
-        {
-            rb.isKinematic = false; // 保持非Kinematic以触发碰撞，但由网络驱动位置
-            rb.constraints = RigidbodyConstraints.FreezeRotationX |
-                             RigidbodyConstraints.FreezeRotationZ;
-        }
-        else
-        {
-            rb.constraints = RigidbodyConstraints.FreezeRotationX |
-                             RigidbodyConstraints.FreezeRotationZ;
-        }
+        rb.constraints = RigidbodyConstraints.FreezeRotationX |
+                         RigidbodyConstraints.FreezeRotationZ;
 
         startPosition = transform.position;
         timeOffset = Random.Range(0f, Mathf.PI * 2f);
-
-        // 初始化网络目标为自身位置
-        networkTargetPosition = transform.position;
-        networkTargetYaw = transform.eulerAngles.y;
-        networkTargetRoll = 0f;
-=======
-        rb.constraints = RigidbodyConstraints.FreezeRotationX |
-                         RigidbodyConstraints.FreezeRotationZ;
->>>>>>> origin/JIN10086
+>>>>>>> parent of 335a2db2 (0.0.4)
     }
 
     void Update()
     {
-<<<<<<< HEAD
-        // ---------- 只有本地玩家才处理输入 ----------
+
+
         if (!photonView.IsMine) return;
+
 
         float horizontalInput = Input.GetAxis("Horizontal");
 
@@ -139,10 +91,11 @@ public class MovementController : MonoBehaviour
         {
             float direction = Mathf.Sign(horizontalInput);
 
+            // 累积转向角度
             float deltaAngle = turnRate * Time.deltaTime * direction;
             currentYaw += deltaAngle;
             currentYaw = Mathf.Clamp(currentYaw, -180f, 180f);
-=======
+
         // === 地面检测 ===
         CheckGround();
 
@@ -166,25 +119,28 @@ public class MovementController : MonoBehaviour
             float direction = Mathf.Sign(horizontalInput);
             float deltaAngle = turnRate * Time.deltaTime * direction;
             currentYaw += deltaAngle;
->>>>>>> origin/JIN10086
+
+
 
             targetRoll = -direction * maxRollAngle;
         }
         else
         {
-<<<<<<< HEAD
+
+
             targetRoll = 0f;
-=======
+
             if (!isRolling)
             {
                 targetRoll = 0f;
             }
->>>>>>> origin/JIN10086
+
         }
     }
 
     void FixedUpdate()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         float smoothYaw = 0f;
         Quaternion targetRotation = Quaternion.Euler(0f, currentYaw, 0f);
@@ -199,30 +155,9 @@ public class MovementController : MonoBehaviour
                 1f / networkLerpSpeed // 时间常数
             );
             rb.MovePosition(smoothPos);
+=======
+>>>>>>> parent of 335a2db2 (0.0.4)
 
-            // 偏航 + 倾斜 分别插值，再组合旋转
-            smoothYaw = Mathf.SmoothDampAngle(
-                transform.eulerAngles.y,
-                networkTargetYaw,
-                ref networkYawVelocity,
-                1f / networkRotLerpSpeed
-            );
-
-            float smoothRoll = Mathf.SmoothDamp(
-                currentRoll, // 这里用currentRoll作为当前值
-                networkTargetRoll,
-                ref networkRollVelocity,
-                1f / networkRotLerpSpeed
-            );
-            currentRoll = smoothRoll; // 更新当前值以便下一帧使用
-
-            targetRotation = Quaternion.Euler(0, smoothYaw, 0) *
-                                        Quaternion.Euler(0, 0, smoothRoll);
-            rb.MoveRotation(targetRotation);
-            return; // 远端处理完毕，不再执行下面的物理移动
-        }
-
-        // ---------- 本地玩家的物理移动 (原有逻辑) ----------
         float floatOffset = Mathf.Sin((Time.time + timeOffset) * floatSpeed) * floatAmplitude;
         float targetY = startPosition.y + floatOffset;
 
@@ -231,6 +166,7 @@ public class MovementController : MonoBehaviour
         newPosition.y = targetY;
         rb.MovePosition(newPosition);
 
+<<<<<<< HEAD
         smoothYaw = Mathf.SmoothDampAngle(
 =======
         // === 1. 高度控制（贴地或下落） ===
@@ -274,6 +210,9 @@ public class MovementController : MonoBehaviour
         // === 3. 转向（Yaw） ===
         float smoothYaw = Mathf.SmoothDampAngle(
 >>>>>>> origin/JIN10086
+=======
+        float smoothYaw = Mathf.SmoothDampAngle(
+>>>>>>> parent of 335a2db2 (0.0.4)
             transform.eulerAngles.y,
             currentYaw,
             ref currentYawVelocity,
@@ -281,6 +220,10 @@ public class MovementController : MonoBehaviour
         );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 335a2db2 (0.0.4)
         currentRoll = Mathf.SmoothDamp(
             currentRoll,
             targetRoll,
@@ -288,65 +231,22 @@ public class MovementController : MonoBehaviour
             rollSmoothTime
         );
 
-        targetRotation = Quaternion.Euler(0, smoothYaw, 0) *
+        // Yaw（偏航）+ Roll（倾斜）
+        Quaternion targetRotation = Quaternion.Euler(0, smoothYaw, 0) *
                                     Quaternion.Euler(0, 0, currentRoll);
         rb.MoveRotation(targetRotation);
     }
 
-    // ---------- PUN2 网络序列化 (每帧调用，建议设为 Unreliable) ----------
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.IsWriting)
-        {
-            // 发送方（本地玩家）：发送当前位置、偏航角、倾斜角
-            stream.SendNext(rb.position);
-            stream.SendNext(currentYaw);
-            stream.SendNext(currentRoll);
-        }
-        else
-        {
-            // 接收方（其他玩家）：接收并存储为目标值
-            networkTargetPosition = (Vector3)stream.ReceiveNext();
-            networkTargetYaw = (float)stream.ReceiveNext();
-            networkTargetRoll = (float)stream.ReceiveNext();
-        }
-    }
-
-    // ---------- 重置功能（带RPC，确保所有客户端同步重置） ----------
-    [PunRPC]
-    public void RPC_ResetOrientation()
-    {
-        // 如果是本地玩家，重置输入状态
-        if (photonView.IsMine)
-        {
-            currentYaw = 0f;
-            currentYawVelocity = 0f;
-            currentRoll = 0f;
-            targetRoll = 0f;
-            rollVelocity = 0f;
-        }
-
-        // 无论本地还是远端，重置位置和旋转（由调用者决定重置到哪，这里仅示例）
-        rb.MovePosition(startPosition);
-        rb.MoveRotation(Quaternion.identity);
-
-        // 同步重置网络目标值，避免插值回弹
-        networkTargetPosition = startPosition;
-        networkTargetYaw = 0f;
-        networkTargetRoll = 0f;
-        networkPosVelocity = Vector3.zero;
-        networkYawVelocity = 0f;
-        networkRollVelocity = 0f;
-    }
-
-    // 外部调用重置的包装方法（例如UI按钮）
     public void ResetOrientation()
     {
-        if (photonView.IsMine)
-        {
-            photonView.RPC("RPC_ResetOrientation", RpcTarget.All);
-        }
+        currentYaw = 0f;
+        currentYawVelocity = 0f;
+        currentRoll = 0f;
+        targetRoll = 0f;
+        rollVelocity = 0f;
+        rb.MoveRotation(Quaternion.identity);
     }
+<<<<<<< HEAD
 =======
         // === 4. 翻滚或倾斜 ===
         float finalRoll;
@@ -479,3 +379,6 @@ public class MovementController : MonoBehaviour
     }
 >>>>>>> origin/JIN10086
 }
+=======
+}
+>>>>>>> parent of 335a2db2 (0.0.4)

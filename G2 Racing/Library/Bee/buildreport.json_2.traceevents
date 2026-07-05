@@ -1,517 +1,318 @@
 ﻿{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
 { "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
-{ "pid": 0, "tid": 1, "ts": 1783146752548352, "dur": 4236423, "ph": "X", "name": "Build ScriptAssembliesAndTypeDB", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146752550005, "dur": 25296, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146752575479, "dur": 72683, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146752648187, "dur": 2779751, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146755427941, "dur": 1346646, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146756774607, "dur": 10168, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146756903035, "dur": 11035993, "ph": "X", "name": "Build ScriptAssembliesAndTypeDB", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146756903054, "dur": 30255, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146756933312, "dur": 47221, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146756980536, "dur": 277691, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146757258230, "dur": 10670772, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146767929004, "dur": 10024, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146771928950, "dur": 1799701, "ph": "X", "name": "Build Player", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146771929112, "dur": 18279, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146771947393, "dur": 41838, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146771989234, "dur": 1154874, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146773144111, "dur": 569926, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146773714038, "dur": 14612, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146773729156, "dur": 34, "ph": "X", "name": "", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371578152630, "dur": 1077863, "ph": "X", "name": "Build ScriptAssembliesAndTypeDB", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371578156367, "dur": 14069, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371578170813, "dur": 1049266, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371579220095, "dur": 10397, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371579379398, "dur": 730747, "ph": "X", "name": "Build ScriptAssembliesAndTypeDB", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371579379431, "dur": 20262, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371579399696, "dur": 700813, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371580100511, "dur": 9634, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371583903516, "dur": 126205, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371583904078, "dur": 16058, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371583920141, "dur": 94461, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371584014605, "dur": 15115, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371584030700, "dur": 44, "ph": "X", "name": "", "args": {} },
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1783146771961090, "dur":10818, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146771971919, "dur":108, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146771972089, "dur":575, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146771972682, "dur":268, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146771972951, "dur":63, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146771973014, "dur":403, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146771973523, "dur":636, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1783146771972727, "dur":257, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1783146771972984, "dur":106, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1783146771972726, "dur":250, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1783146771972977, "dur":116, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1783146771972792, "dur":225, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1783146771972711, "dur":258, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1783146771972707, "dur":251, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1783146771972745, "dur":245, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1783146771972991, "dur":96, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1783146771972771, "dur":303, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1783146771972815, "dur":208, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1783146771972838, "dur":188, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1783146771972858, "dur":172, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1783146771972886, "dur":150, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1783146771972898, "dur":144, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1783146771972921, "dur":126, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1783146771972940, "dur":126, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1783146771972970, "dur":129, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1783146771972991, "dur":89, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146771974665, "dur":95, "ph":"X", "name": "ProfilerWriteOutput" }
-,{ "pid": 0, "tid": 1, "ts": 1783146773729227, "dur": 171, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
-{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
-{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
-{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
-{ "pid": 35942, "tid": 1, "ts": 1783146772822976, "dur": 303533, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1783146772824689, "dur": 55526, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1783146773092584, "dur": 18201, "ph": "X", "name": "OutputData.Write", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1783146773110789, "dur": 15712, "ph": "X", "name": "Backend.Write", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1783146773111850, "dur": 13095, "ph": "X", "name": "JsonToString", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1783146773131436, "dur": 1535, "ph": "X", "name": "", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1783146773130577, "dur": 2420, "ph": "X", "name": "Write chrome-trace events", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146773729430, "dur": 67, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
-{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1783146773187513, "dur":25119, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146773212638, "dur":177, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146773212906, "dur":1213, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146773214157, "dur":554, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146773214713, "dur":479522, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146773694243, "dur":83, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146773694337, "dur":122, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146773694629, "dur":781, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1783146773214071, "dur":656, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1783146773214734, "dur":2533, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1783146773217867, "dur":271, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1783146773218181, "dur":72920, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1783146773291106, "dur":8258, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\WindowsPlayer.exe" }}
-,{ "pid":12345, "tid":1, "ts":1783146773291105, "dur":8261, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing.exe" }}
-,{ "pid":12345, "tid":1, "ts":1783146773299392, "dur":11581, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.Utilities.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1783146773299390, "dur":11586, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Utilities.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1783146773310988, "dur":2448, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Utilities.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1783146773313454, "dur":436, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773313452, "dur":439, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773313903, "dur":3353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773317276, "dur":180, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773317274, "dur":183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773317469, "dur":4399, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773321891, "dur":81, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773321890, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773321980, "dur":16277, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773338294, "dur":171, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773338292, "dur":174, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773338479, "dur":14252, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773352822, "dur":12795, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773365671, "dur":28755, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773394536, "dur":29510, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1783146773424064, "dur":80, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\com.unity.services.core\\UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":1, "ts":1783146773424063, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":1, "ts":1783146773424145, "dur":4399, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1783146773428549, "dur":7522, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":1, "ts":1783146773428547, "dur":7527, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":1, "ts":1783146773436076, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1783146773436233, "dur":43156, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/resources.assets" }}
-,{ "pid":12345, "tid":1, "ts":1783146773479396, "dur":214742, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1783146773214096, "dur":643, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1783146773214740, "dur":2713, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1783146773217462, "dur":80394, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
-,{ "pid":12345, "tid":2, "ts":1783146773217453, "dur":80405, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":2, "ts":1783146773297872, "dur":667, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":2, "ts":1783146773298551, "dur":15849, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Internal.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1783146773298549, "dur":15852, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Internal.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1783146773314410, "dur":3594, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Internal.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1783146773318025, "dur":208, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773318023, "dur":211, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773318245, "dur":4581, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773322858, "dur":215, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773322856, "dur":218, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773323087, "dur":10117, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773333222, "dur":985, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773333221, "dur":987, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773334220, "dur":16112, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773350387, "dur":11263, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773361687, "dur":52747, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773414464, "dur":63254, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1783146773477858, "dur":216283, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1783146773214197, "dur":556, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1783146773214754, "dur":2627, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1783146773217382, "dur":41068, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1783146773286081, "dur":6989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1783146773293094, "dur":15850, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.Demos.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1783146773293092, "dur":15854, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Demos.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1783146773308956, "dur":2752, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Demos.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1783146773311720, "dur":2943, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\mscorlib.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773311719, "dur":2945, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773314674, "dur":7473, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773322159, "dur":67, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonWebSocket.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773322158, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonWebSocket.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773322233, "dur":14445, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonWebSocket.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773336696, "dur":525, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773336694, "dur":529, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773337235, "dur":12998, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773350288, "dur":11252, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773361589, "dur":31997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773393651, "dur":22790, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773417055, "dur":23074, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1783146773440192, "dur":38662, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level1" }}
-,{ "pid":12345, "tid":3, "ts":1783146773478875, "dur":215258, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1783146773214234, "dur":533, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1783146773214767, "dur":2565, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1783146773286131, "dur":5294, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":4, "ts":1783146773291462, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":4, "ts":1783146773291807, "dur":5816, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":4, "ts":1783146773297639, "dur":20028, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1783146773297637, "dur":20032, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.UI.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1783146773317826, "dur":5564, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UI.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1783146773323408, "dur":151, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773323406, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773323573, "dur":13886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773337478, "dur":239, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773337476, "dur":242, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773337727, "dur":12624, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773350391, "dur":8461, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773358975, "dur":31812, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773390980, "dur":25039, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773423342, "dur":19564, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1783146773442942, "dur":251167, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1783146773214297, "dur":482, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1783146773214781, "dur":2548, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1783146773217329, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":5, "ts":1783146773284496, "dur":9699, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":5, "ts":1783146773294266, "dur":18213, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1783146773294249, "dur":18231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1783146773312487, "dur":3194, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1783146773315699, "dur":260, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Net.Http.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773315698, "dur":262, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773315971, "dur":4446, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773320428, "dur":210, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Mono.Security.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773320427, "dur":212, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773320645, "dur":8111, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773328776, "dur":498, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773328774, "dur":502, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773329286, "dur":17603, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773347230, "dur":28638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773375970, "dur":18235, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773394520, "dur":47339, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1783146773441869, "dur":252245, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1783146773214335, "dur":460, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1783146773214795, "dur":2480, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1783146773217283, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":6, "ts":1783146773286138, "dur":7660, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":6, "ts":1783146773293812, "dur":15952, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Analytics.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1783146773293811, "dur":15954, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Analytics.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1783146773309775, "dur":2189, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Analytics.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1783146773311977, "dur":1898, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773311976, "dur":1900, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773313886, "dur":4488, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773318386, "dur":396, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Drawing.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773318385, "dur":398, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773318790, "dur":2596, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773321420, "dur":9863, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773331580, "dur":117, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.Utilities.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773331579, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Utilities.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773331705, "dur":15903, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Utilities.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773347640, "dur":9460, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773357131, "dur":34492, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773391649, "dur":23512, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773415185, "dur":26119, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1783146773441326, "dur":37265, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level0" }}
-,{ "pid":12345, "tid":6, "ts":1783146773478597, "dur":215537, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1783146773214387, "dur":416, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1783146773214804, "dur":2469, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1783146773217292, "dur":57031, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
-,{ "pid":12345, "tid":7, "ts":1783146773217283, "dur":57042, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":7, "ts":1783146773286694, "dur":6227, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":7, "ts":1783146773293024, "dur":10829, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Threading.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1783146773293022, "dur":10833, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Threading.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1783146773303867, "dur":1584, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Threading.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1783146773305463, "dur":12440, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1783146773305461, "dur":12443, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Flow.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1783146773317935, "dur":3437, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.VisualScripting.Flow.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1783146773321386, "dur":243, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Photon\\PhotonLibs\\Photon3Unity3D.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773321385, "dur":246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Photon3Unity3D.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773321639, "dur":9698, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Photon3Unity3D.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773331348, "dur":195, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773331347, "dur":197, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773331554, "dur":15024, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773346607, "dur":11874, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773358516, "dur":54364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773412913, "dur":12836, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1783146773425766, "dur":7990, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1783146773433787, "dur":46088, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1783146773479880, "dur":214236, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1783146773214434, "dur":381, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1783146773214815, "dur":2555, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1783146773217385, "dur":81867, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
-,{ "pid":12345, "tid":8, "ts":1783146773217372, "dur":81882, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":8, "ts":1783146773299266, "dur":790, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":8, "ts":1783146773300069, "dur":12953, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonRealtime.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1783146773300067, "dur":12956, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonRealtime.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1783146773313033, "dur":2157, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonRealtime.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1783146773315200, "dur":862, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773315199, "dur":864, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773316071, "dur":4959, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773321074, "dur":8608, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773330004, "dur":126, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773330003, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773330157, "dur":15666, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773345854, "dur":9104, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773354986, "dur":38624, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773393640, "dur":31873, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1783146773425725, "dur":15833, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets2.assets.resS" }}
-,{ "pid":12345, "tid":8, "ts":1783146773441566, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
-,{ "pid":12345, "tid":8, "ts":1783146773441565, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/boot.config" }}
-,{ "pid":12345, "tid":8, "ts":1783146773441625, "dur":37285, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/boot.config" }}
-,{ "pid":12345, "tid":8, "ts":1783146773478917, "dur":215212, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1783146773214496, "dur":336, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1783146773214833, "dur":2436, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1783146773217298, "dur":95030, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
-,{ "pid":12345, "tid":9, "ts":1783146773217283, "dur":95047, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":9, "ts":1783146773312528, "dur":802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":9, "ts":1783146773313345, "dur":109, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Transactions.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773313344, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773313530, "dur":1942, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773315484, "dur":256, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Numerics.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773315482, "dur":259, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773315750, "dur":3603, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773319366, "dur":905, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Core.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773319365, "dur":908, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773320282, "dur":8200, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773328497, "dur":226, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773328495, "dur":229, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773328733, "dur":14656, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonUnityNetworking.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773343785, "dur":9714, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773353531, "dur":22361, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773375975, "dur":16261, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773392246, "dur":93, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773392245, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773392402, "dur":30422, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773422853, "dur":17171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1783146773440039, "dur":34973, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level1.resS" }}
-,{ "pid":12345, "tid":9, "ts":1783146773475021, "dur":219100, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1783146773214539, "dur":303, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1783146773214843, "dur":3552, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1783146773218405, "dur":461983, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\UnityPlayer.dll" }}
-,{ "pid":12345, "tid":10, "ts":1783146773218396, "dur":461994, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":10, "ts":1783146773680400, "dur":13627, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":11, "ts":1783146773214595, "dur":258, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1783146773214854, "dur":3593, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1783146773218461, "dur":390669, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":11, "ts":1783146773218448, "dur":390685, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":11, "ts":1783146773609143, "dur":1066, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":11, "ts":1783146773610221, "dur":83936, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1783146773214640, "dur":221, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1783146773214861, "dur":3043, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1783146773217906, "dur":360432, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":12, "ts":1783146773217904, "dur":360437, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":12, "ts":1783146773578353, "dur":3121, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":12, "ts":1783146773581486, "dur":112660, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1783146773214684, "dur":188, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1783146773214873, "dur":3073, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1783146773217951, "dur":72575, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\WinPixEventRuntime.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773217947, "dur":72581, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/WinPixEventRuntime.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773290589, "dur":3476, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/WinPixEventRuntime.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773294081, "dur":17093, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.pdb" }}
-,{ "pid":12345, "tid":13, "ts":1783146773294079, "dur":17097, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Core.pdb" }}
-,{ "pid":12345, "tid":13, "ts":1783146773311222, "dur":3118, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.VisualScripting.Core.pdb" }}
-,{ "pid":12345, "tid":13, "ts":1783146773314412, "dur":326, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Security.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773314411, "dur":328, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773314747, "dur":4634, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773319396, "dur":149, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Configuration.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773319395, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773319554, "dur":4728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773324297, "dur":566, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773324296, "dur":568, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773324878, "dur":28016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773352930, "dur":40137, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773393094, "dur":27512, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773420666, "dur":20635, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1783146773441394, "dur":38032, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":13, "ts":1783146773479432, "dur":214715, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1783146773214793, "dur":2483, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1783146773217295, "dur":56167, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
-,{ "pid":12345, "tid":14, "ts":1783146773217283, "dur":56182, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":14, "ts":1783146773286658, "dur":7159, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":14, "ts":1783146773293886, "dur":13468, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.pdb" }}
-,{ "pid":12345, "tid":14, "ts":1783146773293885, "dur":13471, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.pdb" }}
-,{ "pid":12345, "tid":14, "ts":1783146773307366, "dur":1111, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonUnityNetworking.pdb" }}
-,{ "pid":12345, "tid":14, "ts":1783146773308489, "dur":10581, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.pdb" }}
-,{ "pid":12345, "tid":14, "ts":1783146773308487, "dur":10585, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Timeline.pdb" }}
-,{ "pid":12345, "tid":14, "ts":1783146773319086, "dur":4416, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Timeline.pdb" }}
-,{ "pid":12345, "tid":14, "ts":1783146773323602, "dur":244, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":14, "ts":1783146773323601, "dur":246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":14, "ts":1783146773323854, "dur":19847, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":14, "ts":1783146773343755, "dur":19698, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1783146773363503, "dur":59426, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1783146773422970, "dur":55416, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1783146773478398, "dur":215720, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1783146773214729, "dur":2732, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1783146773217462, "dur":41118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":15, "ts":1783146773286377, "dur":5744, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":15, "ts":1783146773292156, "dur":16090, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Device.pdb" }}
-,{ "pid":12345, "tid":15, "ts":1783146773292153, "dur":16095, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Device.pdb" }}
-,{ "pid":12345, "tid":15, "ts":1783146773308279, "dur":1177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Device.pdb" }}
-,{ "pid":12345, "tid":15, "ts":1783146773309466, "dur":12400, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonChat.pdb" }}
-,{ "pid":12345, "tid":15, "ts":1783146773309465, "dur":12402, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonChat.pdb" }}
-,{ "pid":12345, "tid":15, "ts":1783146773321874, "dur":13938, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonChat.pdb" }}
-,{ "pid":12345, "tid":15, "ts":1783146773335836, "dur":169, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":15, "ts":1783146773335833, "dur":174, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":15, "ts":1783146773336019, "dur":21735, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":15, "ts":1783146773357802, "dur":36215, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1783146773394509, "dur":28966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1783146773423498, "dur":56012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1783146773479518, "dur":214634, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1783146773214833, "dur":2438, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1783146773217283, "dur":216, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":16, "ts":1783146773285904, "dur":5823, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":16, "ts":1783146773291746, "dur":739, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Photon\\PhotonLibs\\Photon3Unity3D.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773291744, "dur":742, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Photon3Unity3D.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773292880, "dur":2758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Photon3Unity3D.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773295649, "dur":13307, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Configuration.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773295648, "dur":13310, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Configuration.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773308968, "dur":2334, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Configuration.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773311321, "dur":11761, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773311319, "dur":11764, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Assembly-CSharp.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773323091, "dur":15332, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Assembly-CSharp.pdb" }}
-,{ "pid":12345, "tid":16, "ts":1783146773338473, "dur":40185, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":16, "ts":1783146773378713, "dur":36975, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1783146773415768, "dur":26269, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1783146773442046, "dur":252064, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1783146773214874, "dur":2938, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1783146773285515, "dur":7575, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":17, "ts":1783146773293118, "dur":21361, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.Internal.pdb" }}
-,{ "pid":12345, "tid":17, "ts":1783146773293115, "dur":21366, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.Internal.pdb" }}
-,{ "pid":12345, "tid":17, "ts":1783146773314486, "dur":4003, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.Internal.pdb" }}
-,{ "pid":12345, "tid":17, "ts":1783146773318511, "dur":234, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773318509, "dur":237, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773318758, "dur":4495, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773323266, "dur":149, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.Demos.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773323265, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Demos.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773323423, "dur":14952, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Demos.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773338412, "dur":494, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773338410, "dur":498, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773338921, "dur":18810, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773357781, "dur":35353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773393169, "dur":29854, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773423041, "dur":19616, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1783146773442676, "dur":251455, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1783146773214930, "dur":2753, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1783146773283893, "dur":8854, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":18, "ts":1783146773292762, "dur":17356, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonWebSocket.pdb" }}
-,{ "pid":12345, "tid":18, "ts":1783146773292760, "dur":17360, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonWebSocket.pdb" }}
-,{ "pid":12345, "tid":18, "ts":1783146773310128, "dur":2078, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonWebSocket.pdb" }}
-,{ "pid":12345, "tid":18, "ts":1783146773312217, "dur":2283, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Xml.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773312215, "dur":2286, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773314511, "dur":4976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773319499, "dur":334, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773319498, "dur":336, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773319845, "dur":6348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773326209, "dur":98, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773326207, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773326317, "dur":18957, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773345343, "dur":9175, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773354550, "dur":25887, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773380467, "dur":33095, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773413672, "dur":26252, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1783146773439949, "dur":34617, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level2" }}
-,{ "pid":12345, "tid":18, "ts":1783146773474660, "dur":219483, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1783146773214984, "dur":2842, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1783146773217834, "dur":260570, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":19, "ts":1783146773217829, "dur":260576, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":19, "ts":1783146773478436, "dur":1176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":19, "ts":1783146773479619, "dur":214525, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1783146773215028, "dur":2505, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1783146773284490, "dur":9258, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":20, "ts":1783146773293765, "dur":21065, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Registration.pdb" }}
-,{ "pid":12345, "tid":20, "ts":1783146773293764, "dur":21068, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Registration.pdb" }}
-,{ "pid":12345, "tid":20, "ts":1783146773314843, "dur":3563, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Registration.pdb" }}
-,{ "pid":12345, "tid":20, "ts":1783146773318421, "dur":1743, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Data.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773318420, "dur":1746, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773320176, "dur":9415, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773329604, "dur":377, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773329603, "dur":379, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773329990, "dur":14367, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773344387, "dur":10951, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773355573, "dur":38498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773394477, "dur":30365, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":20, "ts":1783146773424865, "dur":806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":20, "ts":1783146773425702, "dur":6796, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":20, "ts":1783146773432526, "dur":61833, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":20, "ts":1783146773432525, "dur":61836, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":20, "ts":1783146773494362, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1783146773494420, "dur":199736, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1783146773215278, "dur":2202, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1783146773284511, "dur":7432, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":21, "ts":1783146773291959, "dur":12788, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\AOT\\Newtonsoft.Json.pdb" }}
-,{ "pid":12345, "tid":21, "ts":1783146773291957, "dur":12792, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Newtonsoft.Json.pdb" }}
-,{ "pid":12345, "tid":21, "ts":1783146773304760, "dur":924, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Newtonsoft.Json.pdb" }}
-,{ "pid":12345, "tid":21, "ts":1783146773305712, "dur":17153, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Networking.pdb" }}
-,{ "pid":12345, "tid":21, "ts":1783146773305711, "dur":17156, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Networking.pdb" }}
-,{ "pid":12345, "tid":21, "ts":1783146773322878, "dur":9894, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Networking.pdb" }}
-,{ "pid":12345, "tid":21, "ts":1783146773332785, "dur":140, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonRealtime.dll" }}
-,{ "pid":12345, "tid":21, "ts":1783146773332784, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonRealtime.dll" }}
-,{ "pid":12345, "tid":21, "ts":1783146773332934, "dur":16970, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonRealtime.dll" }}
-,{ "pid":12345, "tid":21, "ts":1783146773349941, "dur":28586, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1783146773378540, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1783146773378613, "dur":13537, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1783146773392173, "dur":24194, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1783146773416390, "dur":10556, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1783146773426967, "dur":10311, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":21, "ts":1783146773437336, "dur":4003, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level2.resS" }}
-,{ "pid":12345, "tid":21, "ts":1783146773441438, "dur":37194, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":21, "ts":1783146773478638, "dur":215502, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1783146773215077, "dur":2479, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1783146773217566, "dur":57160, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
-,{ "pid":12345, "tid":22, "ts":1783146773217560, "dur":57167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":22, "ts":1783146773286612, "dur":5883, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":22, "ts":1783146773292518, "dur":15016, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.pdb" }}
-,{ "pid":12345, "tid":22, "ts":1783146773292516, "dur":15020, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.State.pdb" }}
-,{ "pid":12345, "tid":22, "ts":1783146773307543, "dur":989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.VisualScripting.State.pdb" }}
-,{ "pid":12345, "tid":22, "ts":1783146773308544, "dur":9481, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Telemetry.pdb" }}
-,{ "pid":12345, "tid":22, "ts":1783146773308542, "dur":9485, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Telemetry.pdb" }}
-,{ "pid":12345, "tid":22, "ts":1783146773318038, "dur":3936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Telemetry.pdb" }}
-,{ "pid":12345, "tid":22, "ts":1783146773321993, "dur":170, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":22, "ts":1783146773321991, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":22, "ts":1783146773322175, "dur":21940, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":22, "ts":1783146773344170, "dur":10112, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1783146773354327, "dur":32012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1783146773386375, "dur":29615, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1783146773416078, "dur":63223, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1783146773479308, "dur":214804, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1783146773215123, "dur":2453, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1783146773285216, "dur":8411, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":23, "ts":1783146773293661, "dur":16339, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Scheduler.pdb" }}
-,{ "pid":12345, "tid":23, "ts":1783146773293659, "dur":16344, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Scheduler.pdb" }}
-,{ "pid":12345, "tid":23, "ts":1783146773310016, "dur":2936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Scheduler.pdb" }}
-,{ "pid":12345, "tid":23, "ts":1783146773312969, "dur":293, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773312967, "dur":296, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773313275, "dur":2953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773316246, "dur":251, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773316244, "dur":254, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773316510, "dur":4354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773320884, "dur":227, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\netstandard.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773320882, "dur":230, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773321154, "dur":10033, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773331208, "dur":469, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773331206, "dur":472, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773331690, "dur":16274, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773348026, "dur":30787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773378860, "dur":15572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773394479, "dur":31348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":23, "ts":1783146773425886, "dur":171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":23, "ts":1783146773426061, "dur":14816, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":23, "ts":1783146773440916, "dur":37586, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level0.resS" }}
-,{ "pid":12345, "tid":23, "ts":1783146773478521, "dur":215628, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1783146773215167, "dur":2359, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1783146773217537, "dur":56156, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\unity6.2\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
-,{ "pid":12345, "tid":24, "ts":1783146773217531, "dur":56163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":24, "ts":1783146773286743, "dur":6932, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":24, "ts":1783146773293739, "dur":11436, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.pdb" }}
-,{ "pid":12345, "tid":24, "ts":1783146773293738, "dur":11439, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.pdb" }}
-,{ "pid":12345, "tid":24, "ts":1783146773305188, "dur":1195, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.pdb" }}
-,{ "pid":12345, "tid":24, "ts":1783146773306394, "dur":11568, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.pdb" }}
-,{ "pid":12345, "tid":24, "ts":1783146773306393, "dur":11572, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.TextMeshPro.pdb" }}
-,{ "pid":12345, "tid":24, "ts":1783146773317981, "dur":6050, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.TextMeshPro.pdb" }}
-,{ "pid":12345, "tid":24, "ts":1783146773324049, "dur":166, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773324047, "dur":169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773324263, "dur":14027, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773338307, "dur":194, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"D:\\GitHub\\Online-Game-Racing\\G2 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonChat.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773338306, "dur":196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonChat.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773338540, "dur":14084, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/PhotonChat.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773352682, "dur":26214, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773378948, "dur":34825, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773413822, "dur":14258, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":24, "ts":1783146773428125, "dur":43517, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":24, "ts":1783146773471663, "dur":222477, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1783146773696027, "dur":867, "ph":"X", "name": "ProfilerWriteOutput" }
-,{ "pid": 0, "tid": 1, "ts": 1783146773729518, "dur": 307, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1783146773729142, "dur": 693, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+,{ "pid":12345, "tid":0, "ts":1782371583957979, "dur":1869, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583959862, "dur":159, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583960100, "dur":517, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583960641, "dur":446, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583961088, "dur":34565, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583995655, "dur":120, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583995775, "dur":140, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583995939, "dur":74, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583996166, "dur":1167, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1782371583960851, "dur":248, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583961104, "dur":4899, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967408, "dur":138, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967552, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967627, "dur":89, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967624, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967718, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967797, "dur":75, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967794, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967873, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967975, "dur":76, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583967972, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968052, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968131, "dur":69, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968129, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968201, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968275, "dur":68, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968273, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968344, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968417, "dur":219, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\com.unity.services.core\\UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968416, "dur":221, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":1, "ts":1782371583968706, "dur":11357, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level2" }}
+,{ "pid":12345, "tid":1, "ts":1782371583980089, "dur":15571, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583960912, "dur":204, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583961116, "dur":5036, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966153, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966240, "dur":109, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966236, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966446, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966542, "dur":135, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966681, "dur":215, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.pdb" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966679, "dur":218, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.pdb" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966898, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966977, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583966976, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967048, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967117, "dur":167, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967115, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967285, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967351, "dur":261, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967350, "dur":262, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967613, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967705, "dur":83, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967703, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583967789, "dur":535, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1782371583968327, "dur":75, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583968325, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1782371583968653, "dur":16308, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1782371583984988, "dur":10685, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782371583960999, "dur":125, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782371583961127, "dur":5018, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782371583966150, "dur":713, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
+,{ "pid":12345, "tid":3, "ts":1782371583966145, "dur":720, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967056, "dur":112, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Drawing.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967055, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967170, "dur":287, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967461, "dur":283, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.Utilities.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967459, "dur":287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Utilities.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967746, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967835, "dur":84, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967833, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967920, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967999, "dur":76, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583967996, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583968076, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782371583968159, "dur":68, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583968158, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1782371583968228, "dur":308, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1782371583968570, "dur":26976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1782371583961058, "dur":83, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782371583961142, "dur":4887, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782371583966030, "dur":185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1782371583966250, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1782371583966364, "dur":95, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1782371583966360, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1782371583966493, "dur":835, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonWebSocket.pdb" }}
+,{ "pid":12345, "tid":4, "ts":1782371583966492, "dur":837, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonWebSocket.pdb" }}
+,{ "pid":12345, "tid":4, "ts":1782371583967330, "dur":279, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1782371583967613, "dur":337, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1782371583967611, "dur":340, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1782371583967966, "dur":2260, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1782371583970277, "dur":11284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":4, "ts":1782371583981587, "dur":14029, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782371583961128, "dur":4997, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782371583966126, "dur":503, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1782371583966661, "dur":933, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.pdb" }}
+,{ "pid":12345, "tid":5, "ts":1782371583966657, "dur":938, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Core.pdb" }}
+,{ "pid":12345, "tid":5, "ts":1782371583967987, "dur":103, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782371583968377, "dur":194, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1782371583968611, "dur":11441, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/resources.assets" }}
+,{ "pid":12345, "tid":5, "ts":1782371583980089, "dur":15536, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782371583961175, "dur":4843, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966020, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966165, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966357, "dur":82, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966353, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966471, "dur":124, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966470, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.State.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966623, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Registration.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966623, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Registration.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966723, "dur":76, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Internal.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966722, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Internal.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966826, "dur":194, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1782371583966825, "dur":195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.TextMeshPro.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1782371583967168, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583967167, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583967256, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583967255, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583967340, "dur":129, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583967339, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583967498, "dur":1226, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583967497, "dur":1228, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":6, "ts":1782371583968725, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1782371583968835, "dur":12485, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level0.resS" }}
+,{ "pid":12345, "tid":6, "ts":1782371583981348, "dur":14323, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1782371583961203, "dur":4818, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1782371583966047, "dur":696, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1782371583966023, "dur":721, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1782371583966770, "dur":104, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonRealtime.pdb" }}
+,{ "pid":12345, "tid":7, "ts":1782371583966770, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonRealtime.pdb" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967172, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967171, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967269, "dur":62, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967269, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967357, "dur":170, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967357, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967557, "dur":75, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967556, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":7, "ts":1782371583967825, "dur":588, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1782371583968654, "dur":11515, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":7, "ts":1782371583980187, "dur":15433, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782371583961239, "dur":4774, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782371583966032, "dur":524, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
+,{ "pid":12345, "tid":8, "ts":1782371583966017, "dur":540, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1782371583966583, "dur":74, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Scheduler.pdb" }}
+,{ "pid":12345, "tid":8, "ts":1782371583966582, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Scheduler.pdb" }}
+,{ "pid":12345, "tid":8, "ts":1782371583966683, "dur":218, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.pdb" }}
+,{ "pid":12345, "tid":8, "ts":1782371583966682, "dur":220, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.UI.pdb" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967044, "dur":72, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967044, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967143, "dur":106, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\AOT\\Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967143, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967277, "dur":72, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967276, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967350, "dur":130, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967483, "dur":353, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583967481, "dur":355, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583968091, "dur":112, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583968090, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583968337, "dur":231, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583968337, "dur":232, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1782371583968569, "dur":193, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1782371583968763, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/level1" }}
+,{ "pid":12345, "tid":8, "ts":1782371583968823, "dur":12563, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level1" }}
+,{ "pid":12345, "tid":8, "ts":1782371583981407, "dur":14256, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1782371583961259, "dur":4747, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1782371583966038, "dur":93, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
+,{ "pid":12345, "tid":9, "ts":1782371583966017, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":9, "ts":1782371583966172, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1782371583966330, "dur":98, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":9, "ts":1782371583966329, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":9, "ts":1782371583966463, "dur":590, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Device.pdb" }}
+,{ "pid":12345, "tid":9, "ts":1782371583966462, "dur":592, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Device.pdb" }}
+,{ "pid":12345, "tid":9, "ts":1782371583967086, "dur":432, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Core.dll" }}
+,{ "pid":12345, "tid":9, "ts":1782371583967085, "dur":433, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":9, "ts":1782371583967547, "dur":199, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":9, "ts":1782371583967546, "dur":201, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":9, "ts":1782371583968168, "dur":116, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1782371583968167, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1782371583968479, "dur":1776, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":9, "ts":1782371583970318, "dur":11197, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":9, "ts":1782371583981541, "dur":14111, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1782371583961380, "dur":4775, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1782371583966177, "dur":135, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1782371583966166, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1782371583966343, "dur":75, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\WinPixEventRuntime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583966342, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/WinPixEventRuntime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583966483, "dur":742, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1782371583967227, "dur":158, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.Demos.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583967226, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Demos.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583967385, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1782371583967496, "dur":61, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583967495, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583967588, "dur":125, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonChat.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583967587, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonChat.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583968080, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583968079, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1782371583968464, "dur":9598, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1782371583978097, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
+,{ "pid":12345, "tid":10, "ts":1782371583978095, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/boot.config" }}
+,{ "pid":12345, "tid":10, "ts":1782371583978200, "dur":17446, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1782371583961300, "dur":5837, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967202, "dur":66, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967201, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967298, "dur":63, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967298, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967361, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967474, "dur":359, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonRealtime.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967472, "dur":363, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonRealtime.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967835, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967927, "dur":81, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583967925, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583968009, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1782371583968086, "dur":245, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583968084, "dur":248, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1782371583968332, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1782371583968548, "dur":9696, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":11, "ts":1782371583978279, "dur":17363, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1782371583961406, "dur":4602, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1782371583966017, "dur":744, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":12, "ts":1782371583966762, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1782371583966888, "dur":334, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Telemetry.pdb" }}
+,{ "pid":12345, "tid":12, "ts":1782371583966866, "dur":357, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Telemetry.pdb" }}
+,{ "pid":12345, "tid":12, "ts":1782371583967224, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1782371583967350, "dur":690, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":12, "ts":1782371583967349, "dur":691, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":12, "ts":1782371583968236, "dur":122, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1782371583968235, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1782371583968526, "dur":11512, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":12, "ts":1782371583980063, "dur":15567, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1782371583961434, "dur":5087, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1782371583966528, "dur":127, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.Demos.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583966521, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Demos.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583966682, "dur":76, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Configuration.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583966682, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Configuration.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583966785, "dur":65, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Networking.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583966784, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Networking.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583966876, "dur":73, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583966875, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Assembly-CSharp.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583967659, "dur":2522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/Managed/Assembly-CSharp.pdb" }}
+,{ "pid":12345, "tid":13, "ts":1782371583970248, "dur":11019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level0" }}
+,{ "pid":12345, "tid":13, "ts":1782371583981292, "dur":14335, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1782371583961507, "dur":4668, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1782371583966191, "dur":289, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
+,{ "pid":12345, "tid":14, "ts":1782371583966177, "dur":304, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":14, "ts":1782371583966482, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1782371583966595, "dur":203, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.pdb" }}
+,{ "pid":12345, "tid":14, "ts":1782371583966594, "dur":205, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.pdb" }}
+,{ "pid":12345, "tid":14, "ts":1782371583966800, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1782371583966873, "dur":192, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonChat.pdb" }}
+,{ "pid":12345, "tid":14, "ts":1782371583966872, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonChat.pdb" }}
+,{ "pid":12345, "tid":14, "ts":1782371583967066, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1782371583967138, "dur":154, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\PackageCache\\com.unity.visualscripting@1.7.8\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\\Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":14, "ts":1782371583967136, "dur":156, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":14, "ts":1782371583967293, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1782371583967360, "dur":960, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":14, "ts":1782371583967359, "dur":962, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":14, "ts":1782371583968322, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1782371583968392, "dur":60, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1782371583968390, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1782371583968492, "dur":89, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":14, "ts":1782371583968491, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":14, "ts":1782371583968582, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1782371583968686, "dur":11831, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level2.resS" }}
+,{ "pid":12345, "tid":14, "ts":1782371583980549, "dur":15107, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1782371583961626, "dur":4892, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1782371583966527, "dur":84, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Threading.pdb" }}
+,{ "pid":12345, "tid":15, "ts":1782371583966522, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Threading.pdb" }}
+,{ "pid":12345, "tid":15, "ts":1782371583966640, "dur":63, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Analytics.pdb" }}
+,{ "pid":12345, "tid":15, "ts":1782371583966639, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Analytics.pdb" }}
+,{ "pid":12345, "tid":15, "ts":1782371583966731, "dur":76, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.Utilities.pdb" }}
+,{ "pid":12345, "tid":15, "ts":1782371583966730, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.Utilities.pdb" }}
+,{ "pid":12345, "tid":15, "ts":1782371583966837, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.pdb" }}
+,{ "pid":12345, "tid":15, "ts":1782371583966837, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Timeline.pdb" }}
+,{ "pid":12345, "tid":15, "ts":1782371583967184, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonWebSocket.dll" }}
+,{ "pid":12345, "tid":15, "ts":1782371583967183, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonWebSocket.dll" }}
+,{ "pid":12345, "tid":15, "ts":1782371583967268, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":15, "ts":1782371583967267, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":15, "ts":1782371583967338, "dur":114, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1782371583967453, "dur":638, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":15, "ts":1782371583967452, "dur":640, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":15, "ts":1782371583968152, "dur":373, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1782371583968526, "dur":109, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":15, "ts":1782371583968526, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":15, "ts":1782371583968729, "dur":12579, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/level1.resS" }}
+,{ "pid":12345, "tid":15, "ts":1782371583981345, "dur":14309, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1782371583961539, "dur":4643, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966183, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966325, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.24f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_development_mono\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966321, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966490, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966542, "dur":78, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.Internal.pdb" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966541, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.Services.Core.Environments.Internal.pdb" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966649, "dur":100, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\PhotonUnityNetworking.pdb" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966648, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/PhotonUnityNetworking.pdb" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966776, "dur":1471, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\cky_k\\OneDrive\\Desktop\\G1 Racing\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.pdb" }}
+,{ "pid":12345, "tid":16, "ts":1782371583966776, "dur":1472, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Build/G2 Racing_Data/Managed/Unity.VisualScripting.Flow.pdb" }}
+,{ "pid":12345, "tid":16, "ts":1782371583968470, "dur":9907, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Build/G2 Racing_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":16, "ts":1782371583978400, "dur":17282, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1782371583998438, "dur":910, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1782371584030842, "dur": 888, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1782371584030675, "dur": 1087, "ph": "X", "name": "Write chrome-trace events", "args": {} },

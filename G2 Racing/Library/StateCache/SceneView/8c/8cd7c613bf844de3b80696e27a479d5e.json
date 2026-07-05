@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":551.487060546875,"y":310.90863037109377,"z":-78.24871826171875},"rotation":{"x":-0.03372061625123024,"y":0.9486387372016907,"z":0.10831821709871292,"w":0.29532137513160708},"size":232.35650634765626,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":960.0,"y":540.0,"z":0.0},"rotation":{"x":-0.024307269603013994,"y":-0.0024024180602282287,"z":0.000058418314438313246,"w":-0.9997020363807678},"size":677.9769897460938,"orthographic":false}
+>>>>>>> parent of 335a2db2 (0.0.4)
