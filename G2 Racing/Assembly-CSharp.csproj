@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\Scripts\ExplosionBomb.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Scripts\PlayerSetup.cs" />
@@ -73,17 +74,24 @@
     <Compile Include="Assets\Scripts\RacingModeGameManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Scripts\MovementController.cs" />
+    <Compile Include="Assets\Scripts\RespawnSystem.cs" />
     <Compile Include="Assets\Alkoryn Studios\Free Vehicles Pack\Demo\First Person\Scripts\CameraLook.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\Scripts\NetworkManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
+    <Compile Include="Assets\Scripts\Shield.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Scripts\MultiplayerRacingGame.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
-    <Compile Include="Assets\Scripts\RespawnSystem.cs" />
-    <Compile Include="Assets\Scripts\Shield.cs" />
-    <Compile Include="Assets\Scripts\ExplosionBomb.cs" />
+    <Compile Include="Assets\Script_Lan\SpeedBoost.cs" />
+    <Compile Include="Assets\Script_Lan\FloatingObject.cs" />
+    <Compile Include="Assets\BreakableAsteroids\Scripts\ExampleFracture.cs" />
+    <Compile Include="Assets\BreakableAsteroids\Scripts\Fracture.cs" />
+    <Compile Include="Assets\SpaceSkies Free\Demo\Scripts\SkyboxChanger.cs" />
+    <Compile Include="Assets\SpaceSkies Free\Demo\Scripts\LookCamera.cs" />
+    <Compile Include="Assets\Script_Lan\MeteorObstacle.cs" />
+    <Compile Include="Assets\_Creepy_Cat\_3D Scifi Kit Starter Kit_HD\_Scripts\Turn_Move.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

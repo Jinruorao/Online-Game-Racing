@@ -30,7 +30,7 @@ public class MovementController : MonoBehaviour
     public float currentSpeedMultiplier = 1f;   // 当前速度倍率
 
     private Rigidbody rb;
-    private float currentYaw = 0f;
+    private float currentYaw;
     private float currentYawVelocity = 0f;
 
     private float currentRoll = 0f;
@@ -53,9 +53,10 @@ public class MovementController : MonoBehaviour
 
     void Start()
     {
+        currentYaw = transform.eulerAngles.y;
         rb = GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezeRotationX |
-                         RigidbodyConstraints.FreezeRotationZ;
+        //rb.constraints = RigidbodyConstraints.FreezeRotationX |
+         //                RigidbodyConstraints.FreezeRotationZ;
     }
 
     void Update()
@@ -75,7 +76,7 @@ public class MovementController : MonoBehaviour
 
                 if (turnCounter >= tapsForRoll)
                 {
-                    StartRoll("转向触发");
+                    //StartRoll("转向触发");
                     turnCounter = 0;
                 }
             }
@@ -205,7 +206,7 @@ public class MovementController : MonoBehaviour
         // === 检测地面丢失触发翻滚 ===
         if (!isGrounded && !isRolling && !hasTriggeredGroundRoll && Time.time - lastGroundTime > groundLostDelay)
         {
-            StartRoll("地面丢失触发");
+            //StartRoll("地面丢失触发");
             hasTriggeredGroundRoll = true;
             
         }
@@ -218,16 +219,16 @@ public class MovementController : MonoBehaviour
     }
 
     // === 触发翻滚 ===
-    void StartRoll(string reason)
-    {
-        if (isRolling) return;
+    //void StartRoll(string reason)
+    //{
+     //   if (isRolling) return;
+//
+      //  isRolling = true;
+     //   rollStartTime = Time.time;
+     //   rollProgress = 0f;
 
-        isRolling = true;
-        rollStartTime = Time.time;
-        rollProgress = 0f;
-
-        Debug.Log($"🔥 翻滚触发！原因: {reason}");
-    }
+      //  Debug.Log($"🔥 翻滚触发！原因: {reason}");
+  //  }
 
     // === 重置飞船 ===
     public void ResetOrientation()

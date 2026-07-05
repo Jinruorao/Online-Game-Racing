@@ -379,6 +379,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Alkoryn Studios/Free Vehicles Pack/Demo/First Person/Scripts/CameraLook.cs"
 "Assets/Alkoryn Studios/Free Vehicles Pack/Demo/First Person/Scripts/PlayerMovement.cs"
+"Assets/BreakableAsteroids/Scripts/ExampleFracture.cs"
+"Assets/BreakableAsteroids/Scripts/Fracture.cs"
 "Assets/Photon/PhotonChat/Demos/Common/EventSystemSpawner.cs"
 "Assets/Photon/PhotonChat/Demos/Common/OnStartDelete.cs"
 "Assets/Photon/PhotonChat/Demos/Common/TextButtonTransition.cs"
@@ -405,6 +407,12 @@
 "Assets/Scripts/RespawnSystem.cs"
 "Assets/Scripts/Shield.cs"
 "Assets/Scripts/TimeCountDownManager.cs"
+"Assets/Script_Lan/FloatingObject.cs"
+"Assets/Script_Lan/MeteorObstacle.cs"
+"Assets/Script_Lan/SpeedBoost.cs"
+"Assets/SpaceSkies Free/Demo/Scripts/LookCamera.cs"
+"Assets/SpaceSkies Free/Demo/Scripts/SkyboxChanger.cs"
+"Assets/_Creepy_Cat/_3D Scifi Kit Starter Kit_HD/_Scripts/Turn_Move.cs"
 -langversion:9.0
 
 /deterministic
