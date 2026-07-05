@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|d:\\unityprojects\\gameyear3final\\online-game-racing\\g2 racing\\assets\\scripts\\explosionbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\explosionbomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\respawnsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\respawnsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\shield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\movementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExplosionBomb.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\ExplosionBomb.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ExplosionBomb.cs",
+              "ToolTip": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\ExplosionBomb.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ExplosionBomb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T08:46:17.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Shield.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\Shield.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Shield.cs",
+              "ToolTip": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\Shield.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Shield.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAcwGoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T08:15:28.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RespawnSystem.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\RespawnSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RespawnSystem.cs",
+              "ToolTip": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\RespawnSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RespawnSystem.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAgwNIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T07:39:45.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MovementController.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\MovementController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MovementController.cs",
+              "ToolTip": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\MovementController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MovementController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T14:36:54.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
+              "ToolTip": "D:\\UnityProjects\\GameYear3Final\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraFollow.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T14:34:59.591Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
