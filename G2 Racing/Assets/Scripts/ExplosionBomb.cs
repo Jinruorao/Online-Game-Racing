@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using System.Collections;
+using Photon.Pun;
 
-public class ExplosionBomb: MonoBehaviour
+public class ExplosionBomb : MonoBehaviourPunCallbacks
 {
     [Header("=== Attack Parameters ===")]
     public float attackRange = 50f;
@@ -11,13 +13,22 @@ public class ExplosionBomb: MonoBehaviour
     public GameObject flameEffectPrefab;
 
     [Header("=== Cooldown ===")]
-    public float cooldownDuration = 5f;         // 冷却时间（秒）
+    public float cooldownDuration = 5f;
 
-    private float currentCooldown = 0f;          // 当前冷却剩余时间
-    private bool isOnCooldown = false;           // 是否冷却中
+    private float currentCooldown = 0f;
+    private bool isOnCooldown = false;
+
+    private PhotonView pv;
+
+    void Start()
+    {
+        pv = GetComponent<PhotonView>();
+    }
 
     void Update()
     {
+        if (!pv.IsMine) return;
+
         // 更新冷却计时
         if (isOnCooldown)
         {
@@ -30,7 +41,7 @@ public class ExplosionBomb: MonoBehaviour
             }
         }
 
-        // 按 Q 攻击（只有不在冷却中才能攻击）
+        // 按 Q 攻击
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (isOnCooldown)
@@ -45,7 +56,6 @@ public class ExplosionBomb: MonoBehaviour
     void AttackNearestEnemy()
     {
         GameObject[] allPlayers = GameObject.FindGameObjectsWithTag("Player");
-
         Transform nearestEnemy = null;
         float nearestAngle = Mathf.Infinity;
 
@@ -67,58 +77,66 @@ public class ExplosionBomb: MonoBehaviour
             }
         }
 
-        // ★ 只有打中才显示特效
         if (nearestEnemy != null)
         {
-            // ★ 进入冷却
             StartCooldown();
 
-            // 显示火焰特效
-            if (flameEffectPrefab != null)
+            PhotonView targetPV = nearestEnemy.GetComponent<PhotonView>();
+            if (targetPV != null)
             {
-                Vector3 spawnPos = nearestEnemy.position + Vector3.up * 2f;
-                GameObject flame = Instantiate(flameEffectPrefab, spawnPos, Quaternion.identity);
-                flame.transform.SetParent(nearestEnemy);
-
-                // ★ 不控制播放，只控制显示
-                flame.SetActive(true);
-
-                // 3秒后销毁
-                Destroy(flame, 3f);
+                // 通过网络 RPC 在所有客户端上执行攻击效果
+                pv.RPC("RPC_AttackTarget", RpcTarget.All, targetPV.ViewID);
             }
-
-            // 禁用移动
-            MovementController movement = nearestEnemy.GetComponent<MovementController>();
-            if (movement != null)
-            {
-                movement.enabled = false;
-            }
-
-            // 停止物理
-            Rigidbody rb = nearestEnemy.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.velocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-            }
-
-            // 触发回溯
-            RespawnSystem respawn = nearestEnemy.GetComponent<RespawnSystem>();
-            if (respawn != null && !respawn.isRespawning)
-            {
-                respawn.TriggerRespawn();
-            }
-
-            Debug.Log($"💥 Attacked {nearestEnemy.name}!");
         }
         else
         {
-            // ★ 没打中只输出日志，不显示特效
             Debug.Log("❌ No enemy in front!");
         }
     }
 
-    // 开始冷却
+    [PunRPC]
+    void RPC_AttackTarget(int targetViewID)
+    {
+        PhotonView targetPV = PhotonView.Find(targetViewID);
+        if (targetPV == null) return;
+
+        GameObject target = targetPV.gameObject;
+
+        // 显示火焰特效（每个客户端本地生成，不需要网络同步）
+        if (flameEffectPrefab != null)
+        {
+            Vector3 spawnPos = target.transform.position + Vector3.up * 2f;
+            GameObject flame = Instantiate(flameEffectPrefab, spawnPos, Quaternion.identity);
+            flame.transform.SetParent(target.transform);
+            flame.SetActive(true);
+            Destroy(flame, 3f);
+        }
+
+        // 禁用移动
+        MovementController movement = target.GetComponent<MovementController>();
+        if (movement != null) movement.enabled = false;
+
+        CarMovement carMove = target.GetComponent<CarMovement>();
+        if (carMove != null) carMove.enabled = false;
+
+        // 停止物理
+        Rigidbody rb = target.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
+        // 触发重生
+        RespawnSystem respawn = target.GetComponent<RespawnSystem>();
+        if (respawn != null && !respawn.isRespawning)
+        {
+            respawn.TriggerRespawn();
+        }
+
+        Debug.Log($"💥 Attacked {target.name} via network!");
+    }
+
     void StartCooldown()
     {
         isOnCooldown = true;
@@ -126,13 +144,11 @@ public class ExplosionBomb: MonoBehaviour
         Debug.Log($"⏳ 技能进入冷却... {cooldownDuration} 秒");
     }
 
-    // 获取冷却剩余时间（供外部UI显示）
     public float GetCooldownRemaining()
     {
         return currentCooldown;
     }
 
-    // 是否冷却中
     public bool IsOnCooldown()
     {
         return isOnCooldown;

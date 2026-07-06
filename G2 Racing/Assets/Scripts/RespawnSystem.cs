@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Photon.Pun;
 
-public class RespawnSystem : MonoBehaviour
+public class RespawnSystem : MonoBehaviourPunCallbacks
 {
     [Header("=== 回溯参数 ===")]
     public float historyDuration = 3f;
@@ -22,19 +23,22 @@ public class RespawnSystem : MonoBehaviour
     private float blinkTimer = 0f;
     private bool isVisible = true;
 
+    private PhotonView pv;
+
     void Start()
     {
+        pv = GetComponent<PhotonView>();
+
         if (rb == null) rb = GetComponent<Rigidbody>();
         if (movementController == null) movementController = GetComponent<MovementController>();
 
         positionHistory = new Queue<Vector3>();
         historyTimer = 0f;
 
-        
         positionHistory.Enqueue(transform.position);
         Debug.Log($"RespawnSystem 启动，初始位置：{transform.position}");
 
-        if (shield == null)//获取保护罩
+        if (shield == null)
         {
             shield = GetComponentInChildren<Shield>();
         }
@@ -55,7 +59,7 @@ public class RespawnSystem : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isRespawning)
+        if (isRespawning && pv != null && pv.IsMine)
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
@@ -77,7 +81,6 @@ public class RespawnSystem : MonoBehaviour
                 positionHistory.Dequeue();
             }
 
-            // ★ 调试：每30帧输出一次历史数量
             if (Time.frameCount % 300 == 0)
             {
                 Debug.Log($"📊 历史记录数：{positionHistory.Count}");
@@ -112,18 +115,20 @@ public class RespawnSystem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 公开方法：触发重生（本地 + 网络 RPC）
+    /// </summary>
     public void TriggerRespawn()
     {
         if (isRespawning) return;
 
-        // ★ 关键修复：获取3秒前的位置
+        // 计算目标位置
         Vector3 targetPosition = GetPositionAtTime(historyDuration);
 
         Debug.Log($"🔍 获取历史位置... 历史总数：{positionHistory.Count}");
 
         if (targetPosition == Vector3.zero && positionHistory.Count > 0)
         {
-            // ★ 如果获取失败，取最早的位置（最老的那个）
             Vector3[] historyArray = positionHistory.ToArray();
             targetPosition = historyArray[0];
             Debug.Log($"⚠️ 使用最早位置：{targetPosition}");
@@ -131,7 +136,6 @@ public class RespawnSystem : MonoBehaviour
 
         if (targetPosition == Vector3.zero)
         {
-            // 没有任何历史，回到当前位置后方
             targetPosition = transform.position - transform.forward * 5f;
             targetPosition.y = transform.position.y;
             Debug.Log($"⚠️ 没有历史，使用后方位置：{targetPosition}");
@@ -139,6 +143,32 @@ public class RespawnSystem : MonoBehaviour
 
         Debug.Log($"📍 回溯目标位置：{targetPosition}");
 
+        // Owner 端通过网络 RPC 同步重生
+        if (pv != null)
+        {
+            pv.RPC("RPC_DoRespawn", RpcTarget.All, targetPosition);
+        }
+        else
+        {
+            // 没有 PhotonView 回退本地执行
+            ExecuteRespawn(targetPosition);
+        }
+    }
+
+    /// <summary>
+    /// RPC：所有客户端执行重生效果
+    /// </summary>
+    [PunRPC]
+    void RPC_DoRespawn(Vector3 targetPosition)
+    {
+        ExecuteRespawn(targetPosition);
+    }
+
+    /// <summary>
+    /// 实际执行重生逻辑（本地 + 网络调用统一入口）
+    /// </summary>
+    void ExecuteRespawn(Vector3 targetPosition)
+    {
         isRespawning = true;
         respawnTimer = respawnBlinkDuration;
         blinkTimer = 0f;
@@ -149,19 +179,25 @@ public class RespawnSystem : MonoBehaviour
             movementController.enabled = false;
         }
 
-        // ★ 使用 MovePosition 并确保位置正确
-        rb.MovePosition(targetPosition);
-        rb.position = targetPosition;  // 直接设置确保生效
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        // Owner 端直接设置物理位置
+        if (rb != null)
+        {
+            rb.MovePosition(targetPosition);
+            rb.position = targetPosition;
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+        else
+        {
+            transform.position = targetPosition;
+        }
 
-        // 重置速度倍率
         if (movementController != null)
         {
             movementController.ResetSpeedMultiplier();
         }
 
-        Debug.Log($"💥 触发回溯！回到 {historyDuration} 秒前的位置");
+        Debug.Log($"💥 触发回溯！回到 位置 {targetPosition}");
     }
 
     Vector3 GetPositionAtTime(float secondsAgo)
@@ -172,21 +208,14 @@ public class RespawnSystem : MonoBehaviour
             return Vector3.zero;
         }
 
-        // ★ 计算目标索引：从最新往前数
         int targetIndex = Mathf.FloorToInt(secondsAgo / recordInterval);
-
-        // 确保不超出范围
         targetIndex = Mathf.Min(targetIndex, positionHistory.Count - 1);
 
         Vector3[] historyArray = positionHistory.ToArray();
-        // 索引0是最老的，索引-1是最新的
         int index = historyArray.Length - targetIndex - 1;
         index = Mathf.Max(0, index);
 
-        Vector3 result = historyArray[index];
-        Debug.Log($"📌 获取位置：索引 {index} / 总数 {historyArray.Length}，位置 {result}");
-
-        return result;
+        return historyArray[index];
     }
 
     void SetShipVisibility(bool visible)
@@ -200,6 +229,8 @@ public class RespawnSystem : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (!pv.IsMine) return; // 只有 Owner 才能触发碰撞重生
+
         Debug.Log($"💥 碰撞检测到：{collision.gameObject.name}，Tag: {collision.gameObject.tag}");
 
         if (collision.gameObject.CompareTag("Obstacle") && !isRespawning)
@@ -207,7 +238,7 @@ public class RespawnSystem : MonoBehaviour
             if (shield != null && shield.TryBlockHit())
             {
                 Debug.Log("🛡️ 护盾挡住了撞击！飞船安全！");
-                return;  // 护盾挡住，不触发回溯
+                return;
             }
 
             TriggerRespawn();

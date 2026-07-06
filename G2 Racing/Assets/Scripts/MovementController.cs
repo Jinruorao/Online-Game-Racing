@@ -53,10 +53,12 @@ public class MovementController : MonoBehaviour
 
     void Start()
     {
+      
         currentYaw = transform.eulerAngles.y;
         rb = GetComponent<Rigidbody>();
         //rb.constraints = RigidbodyConstraints.FreezeRotationX |
          //                RigidbodyConstraints.FreezeRotationZ;
+        rb.useGravity = false;
     }
 
     void Update()
@@ -121,6 +123,7 @@ public class MovementController : MonoBehaviour
         }
         else
         {
+  
             // 没有地面：自由落体
             float fallVelocity = rb.velocity.y - gravityForce * Time.fixedDeltaTime;
             newPosition.y = rb.position.y + fallVelocity * Time.fixedDeltaTime;

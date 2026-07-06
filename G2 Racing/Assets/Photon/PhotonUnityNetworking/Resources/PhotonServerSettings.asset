@@ -40,6 +40,16 @@ MonoBehaviour:
   - RespawnSpaceship
   - StartTheRace
   - SetTime
+  - RPC_ActivateShield
+  - RPC_AttackTarget
+  - RPC_DeactivateShield
+  - RPC_DisplayResult
+  - RPC_DoRespawn
+  - RPC_GameFinished
+  - RPC_PlayerFinished
+  - RPC_SetTime
+  - RPC_StartTheRace
+  - RPC_UpdateLap
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

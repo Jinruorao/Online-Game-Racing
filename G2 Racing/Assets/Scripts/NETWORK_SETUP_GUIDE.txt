@@ -1,0 +1,78 @@
+﻿=================================================================
+G2 Racing — 多人网络同步设置指南（更新版）
+=================================================================
+
+当前 Resources 结构：
+  Assets/Resources/
+    ├── Space Ship.prefab          ← 测试飞船（唯一使用）
+    └── calss assets/
+         └── (6 个旧车，废案，不处理)
+
+═══ 步骤 1：在 Unity Editor 中运行自动设置工具 ═══
+
+  菜单栏 → Tools → Racing Game → Setup Network Prefabs
+
+  工具会自动扫描整个 Assets/Resources 目录（包括子文件夹），
+  为每个 Prefab 批量添加：
+    ✅ PhotonView
+    ✅ CarSync（自动加入 ObservedComponents）
+    ✅ PlayerSetup
+    ✅ Rigidbody（若缺失）
+    ✅ Tag = "Player"
+
+  然后用 Validate 验证一次：
+    Tools → Racing Game → Validate Prefabs (Check Only)
+
+═══ 步骤 2：配置 Space Ship Prefab ═══
+
+  打开 Assets/Resources/Space Ship.prefab，做以下操作：
+
+  a) 添加 Camera 子对象作为玩家摄像机
+     - Inspector 中右键 → Camera
+     - Transform 位置设为 (0, 5, -10)
+     - 将 Camera 对象拖到 PlayerSetup.PlayerCamera 引用上
+     - 禁用子 Camera 的 AudioListener（防止两个 AudioListener 冲突）
+
+  b) 添加 CameraFollow 脚本到 Camera 上（可选）
+     - 将 target 设为飞船父对象
+
+  c) 添加脚本组件（根据需要）
+     Racing 模式：TimeCountDownManager, LapController
+     Death 模式：TimeCountDownManager, ExplosionBomb, Shield, RespawnSystem
+
+═══ 步骤 3：场景配置 ═══
+
+  在 RacingScene（和/或 DeathRaceScene）中：
+
+  a) 找到 RacingModeGameManager 对象（或创建一个空对象添加此脚本）
+
+  b) 将其 PlayerPrefabs[] 数组第 0 项设为 Space Ship.prefab
+     （从 Project 窗口直接拖入）
+
+  c) 设置 InstantiatePositions[] 数组
+     至少 3 个生成位置（每个玩家对应一个）
+
+  d) 设置 TimeUIText（用来显示倒计时的 UI Text）
+     - 创建一个 UI → Text，挂到该引用上
+
+  e) 设置 lapTriggers[] 列表
+     - 赛道上的圈数碰撞体，拖入此列表
+
+═══ 步骤 4：PlayerSelection 大厅预览 ═══
+
+  如果你的 LobbyScene 有 PlayerSelection 组件：
+
+  a) 把 SelectablePlayers[] 数组替换为 Space Ship 的预览模型
+
+  b) 只有一个飞船的话，数组放一项即可
+
+═══ ✅ 完成后整体运行流程 ═══
+
+  Launch → Login → GameMode 选择 → 创建/加入房间
+  → 选飞船 → Ready → 房主 Start
+  → PhotonNetwork.LoadLevel("RacingScene")
+  → RacingModeGameManager 在 Start() 中
+    PhotonNetwork.Instantiate("Space Ship", ...)
+  → 每个玩家各自拥有自己的飞船（IsMine = true）
+  → CarSync 同步位置到其他玩家（OnPhotonSerializeView）
+  → 倒计时 → CarMovement.controlsEnabled = true → 开跑！
