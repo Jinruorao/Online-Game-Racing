@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpeedBoost : MonoBehaviour
 {
@@ -7,14 +7,17 @@ public class SpeedBoost : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        Debug.Log($"💥 碰撞检测到：{other.gameObject.name}，Tag：{other.gameObject.tag}");
         if (other.CompareTag("Player"))
         {
-            //PlayerMovement movement = other.GetComponent<PlayerMovement>();
-
-           // if (movement != null)
-            //{
-                //movement.StartCoroutine(movement.SpeedBoost(boostMultiplier, boostDuration));
-           // }
+            MovementController movement = other.GetComponent<MovementController>();
+            if (movement != null)
+            {
+                Debug.Log($"🚀 加速前速度：{movement.forwardSpeed}");
+                movement.forwardSpeed *= boostMultiplier;
+                movement.Invoke("ResetSpeed", boostDuration);
+            }
         }
     }
 }
