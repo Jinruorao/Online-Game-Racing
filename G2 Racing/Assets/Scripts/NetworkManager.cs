@@ -137,12 +137,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             if(PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("rc"))
             {
                 //Racing game mode
-                PhotonNetwork.LoadLevel("RacingScene");
+                PhotonNetwork.LoadLevel("Level 1");
             }
             else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("sr"))
             {
                 //Speed-Up race mode
-                PhotonNetwork.LoadLevel("SpeedUpRaceScene");
+                PhotonNetwork.LoadLevel("Level 2");
             }
         }
     }

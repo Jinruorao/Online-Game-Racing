@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|c:\\users\\wilbe\\onedrive\\documents\\github\\online-game-racing\\g2 racing\\assets\\scripts\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|c:\\users\\wilbe\\onedrive\\documents\\github\\online-game-racing\\g2 racing\\assets\\scripts\\racingplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\racingplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\racingplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|c:\\users\\wilbe\\onedrive\\documents\\github\\online-game-racing\\g2 racing\\assets\\scripts\\speedupraceplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\speedupraceplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\speedupraceplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -62,8 +62,7 @@
               "RelativeToolTip": "Assets\\Scripts\\RacingPlayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:13:21.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T09:13:21.759Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "Assets\\Scripts\\SpeedUpRacePlayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:06:48.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T09:06:48.877Z"
             },
             {
               "$type": "Document",
@@ -86,7 +84,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\NetworkManager.cs",
               "ToolTip": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\NetworkManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\NetworkManager.cs",
-              "ViewState": "AgIAAEUBAAAAAAAAAAAtwFoBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAMwHIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-08T08:21:41.281Z",
               "EditorCaption": ""
