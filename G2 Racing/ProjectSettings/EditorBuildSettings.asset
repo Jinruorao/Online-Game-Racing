@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LobbyScene.unity
     guid: 3adb158719a2fde47b23f83f67d010c9
   - enabled: 1
-    path: Assets/Scenes/RacingScene.unity
-    guid: 7843b4af5b53323488164a379316bd10
+    path: Assets/Scenes/Level 1.unity
+    guid: 1edd0eed7d619894c953c09510e164cc
   - enabled: 1
-    path: Assets/Scenes/DeathRaceScene.unity
-    guid: 7914baaf4674dcb47b57696ee3cfd89e
+    path: Assets/Scenes/Level 2.unity
+    guid: f5e2d096e5cfad0419b9829299b29f29
   m_configObjects: {}

@@ -34,7 +34,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public Text GameModeText;
     public Image PanelBackground;
     public Sprite RacingBackground;
-    public Sprite DeathRaceBackground;
+    public Sprite SpeedUpRaceBackground;
+    public GameObject[] PlayerSelectionUIGameObjects;
+    public SpeedUpRacePlayer[] SpeedUpRacePlayers;
+    public RacingPlayer[] RacingPlayers;
+
 
     [Header("Join Random Room Panel")]
     public GameObject JoinRandomRoomUIPanel;
@@ -97,7 +101,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             string[] roomPropsInLobby = { "gm" }; //gm = game mode
                                                   //two game modes
                                                   //1. racing = "rc"
-                                                  //2. death race = "dr"
+                                                  //2. speedUp race = "sr"
 
             ExitGames.Client.Photon.Hashtable customRoomProperties = new
                 ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };
@@ -135,10 +139,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 //Racing game mode
                 PhotonNetwork.LoadLevel("RacingScene");
             }
-            else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("dr"))
+            else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("sr"))
             {
-                //death race mode
-                PhotonNetwork.LoadLevel("DeathRaceScene");
+                //Speed-Up race mode
+                PhotonNetwork.LoadLevel("SpeedUpRaceScene");
             }
         }
     }
@@ -173,12 +177,27 @@ public override void OnConnectedToMaster()
                 //Racing game mode
                 GameModeText.text = "LETS RACE!";
                 PanelBackground.sprite = RacingBackground;
+
+                for (int i = 0; i < PlayerSelectionUIGameObjects.Length; i++)
+                {
+                    PlayerSelectionUIGameObjects[i].transform.Find("PlayerName").GetComponent<Text>().text = RacingPlayers[i].playerName;
+                    PlayerSelectionUIGameObjects[i].GetComponent<Image>().sprite = RacingPlayers[i].playerSprite;
+                    PlayerSelectionUIGameObjects[i].transform.Find("PlayerProperty").GetComponent<Text>().text = "";
+                }
+
             }
-            else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("dr"))
+            else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("sr"))
             {
-                //Death race game mode
-                GameModeText.text = "DEATH RACE!";
-                PanelBackground.sprite = DeathRaceBackground;
+                //Speed up race game mode
+                GameModeText.text = "SPEED UP RACE!";
+                PanelBackground.sprite = SpeedUpRaceBackground;
+
+                for (int i = 0; i < PlayerSelectionUIGameObjects.Length; i++)
+                {
+                    PlayerSelectionUIGameObjects[i].transform.Find("PlayerName").GetComponent<Text>().text = SpeedUpRacePlayers[i].playerName;
+                    PlayerSelectionUIGameObjects[i].GetComponent<Image>().sprite = SpeedUpRacePlayers[i].playerSprite;
+                    PlayerSelectionUIGameObjects[i].transform.Find("PlayerProperty").GetComponent<Text>().text = SpeedUpRacePlayers[i].powerUpName;
+                }
             }
 
             if(playerListGameObjects == null)
@@ -272,7 +291,7 @@ public override void OnConnectedToMaster()
             string[] roomPropsInLobby = { "gm" }; //gm = game mode
                                                   //two game modes
                                                   //1. racing = "rc"
-                                                  //2. death race = "dr"
+                                                  //2. speedUp race = "sr"
 
             ExitGames.Client.Photon.Hashtable customRoomProperties = new
                 ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };

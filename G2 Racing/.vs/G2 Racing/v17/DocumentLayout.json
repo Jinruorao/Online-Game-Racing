@@ -3,15 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|c:\\users\\wilbe\\onedrive\\documents\\github\\online-game-racing\\g2 racing\\assets\\scripts\\playersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|c:\\users\\wilbe\\onedrive\\documents\\github\\online-game-racing\\g2 racing\\assets\\scripts\\racingplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\racingplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|c:\\users\\wilbe\\onedrive\\documents\\github\\online-game-racing\\g2 racing\\assets\\scripts\\speedupraceplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\speedupraceplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\playersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|c:\\users\\wilbe\\onedrive\\documents\\github\\online-game-racing\\g2 racing\\assets\\scripts\\lapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\lapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|c:\\users\\wilbe\\onedrive\\documents\\github\\online-game-racing\\g2 racing\\assets\\scripts\\movementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\assets\\scripts\\movementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE3C1CB9-9C95-5AC9-45D6-E7E12C6EC7F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -38,11 +50,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RacingPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\RacingPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RacingPlayer.cs",
+              "ToolTip": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\RacingPlayer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RacingPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T09:13:21.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpeedUpRacePlayer.cs",
+              "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\SpeedUpRacePlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpeedUpRacePlayer.cs",
+              "ToolTip": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\SpeedUpRacePlayer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SpeedUpRacePlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T09:06:48.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NetworkManager.cs",
+              "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\NetworkManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NetworkManager.cs",
+              "ToolTip": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\NetworkManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NetworkManager.cs",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAtwFoBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T08:21:41.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PlayerSetup.cs",
               "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\PlayerSetup.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerSetup.cs",
@@ -50,12 +101,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T13:37:13.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T13:37:13.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LapController.cs",
               "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\LapController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LapController.cs",
@@ -63,12 +113,11 @@
               "RelativeToolTip": "Assets\\Scripts\\LapController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T13:32:53.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T13:32:53.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ExplosionBomb.cs",
               "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\ExplosionBomb.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ExplosionBomb.cs",
@@ -80,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Shield.cs",
               "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\Shield.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Shield.cs",
@@ -92,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "RespawnSystem.cs",
               "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\RespawnSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RespawnSystem.cs",
@@ -104,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MovementController.cs",
               "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\MovementController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovementController.cs",
@@ -112,12 +161,11 @@
               "RelativeToolTip": "Assets\\Scripts\\MovementController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAADwvzcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T14:36:54.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T14:36:54.456Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "C:\\Users\\wilbe\\OneDrive\\Documents\\GitHub\\Online-Game-Racing\\G2 Racing\\Assets\\Scripts\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
