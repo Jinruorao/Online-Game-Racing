@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &2003344738840669884
 GameObject:
@@ -116,9 +116,10 @@ GameObject:
   - component: {fileID: 8309748096621652332}
   - component: {fileID: 9085394200685416550}
   - component: {fileID: 5807513499522272679}
+  - component: {fileID: 5765516501097443694}
   m_Layer: 0
   m_Name: R Space Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +142,7 @@ Transform:
   - {fileID: 8305219477043840671}
   - {fileID: 2159098993663492536}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8309748095462295181
 Rigidbody:
@@ -158,7 +159,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &8309748095462295182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,23 +172,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a383abcd0ec1442b736d89baab5c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 5
-  turnRate: 120
+  forwardSpeed: 6
+  turnRate: 90
   turnSmoothTime: 0.08
   heightAboveGround: 0.5
   heightSmoothTime: 0.15
   groundCheckDistance: 10
   groundLayer:
     serializedVersion: 2
-    m_Bits: -1
+    m_Bits: 4294967295
   gravityForce: 20
   maxRollAngle: 25
   rollSmoothTime: 0.1
-  rollDuration: 0.4
-  tapsForRoll: 6
-  groundLostDelay: 0
-  baseForwardSpeed: 50
-  currentSpeedMultiplier: 1
 --- !u!114 &8309748096621652333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,9 +217,9 @@ MonoBehaviour:
   respawnBlinkDuration: 1
   blinkInterval: 0.1
   recordInterval: 0.1
-  movementController: {fileID: 0}
-  rb: {fileID: 0}
-  shield: {fileID: 0}
+  movementController: {fileID: 8309748095462295182}
+  rb: {fileID: 8309748095462295181}
+  shield: {fileID: 8309748095461943422}
   isRespawning: 0
 --- !u!114 &9085394200685416550
 MonoBehaviour:
@@ -244,12 +240,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2661791047820220456}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b14209a74ed16134f874b4bc1632dc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   raceFinished: 0
+--- !u!65 &5765516501097443694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661791047820220456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5103701576087971285
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +273,7 @@ GameObject:
   - component: {fileID: 4746934172623844914}
   m_Layer: 0
   m_Name: Spaceship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -368,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8309748095461943423
 Transform:
   m_ObjectHideFlags: 0

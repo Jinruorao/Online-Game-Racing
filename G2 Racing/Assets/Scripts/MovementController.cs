@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class MovementController : MonoBehaviour
 {
@@ -22,13 +23,17 @@ public class MovementController : MonoBehaviour
 
     private Rigidbody rb;
     private float currentYaw;
-    private float currentYawVelocity = 0f;
-    private float currentRoll = 0f;
-    private float targetRoll = 0f;
-    private float rollVelocity = 0f;
-    private float currentHeightVelocity = 0f;
-    private bool hasGround = false;
-    private float lastGroundTime = 0f;
+    private float currentYawVelocity;
+    private float currentRoll;
+    private float targetRoll;
+    private float rollVelocity;
+    private float currentHeightVelocity;
+    private bool hasGround;
+    private RaycastHit _groundHit;          // 缓存的地面检测结果，避免 FixedUpdate 重复射线
+
+    // 加速倍率
+    private float _currentBoostMultiplier = 1f;
+    private Coroutine _boostCoroutine;
 
     void Start()
     {
@@ -36,22 +41,20 @@ public class MovementController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
 
-        // ★ 自动修复：如果 groundLayer 没设置，回退到所有层
         if (groundLayer.value == 0)
-        {
             groundLayer = ~0;
-        }
     }
 
     void Update()
     {
         CheckGround();
-        float horizontalInput = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(horizontalInput) > 0.01f)
+
+        float h = Input.GetAxis("Horizontal");
+        if (Mathf.Abs(h) > 0.01f)
         {
-            float direction = Mathf.Sign(horizontalInput);
-            currentYaw += turnRate * Time.deltaTime * direction;
-            targetRoll = -direction * maxRollAngle;
+            float dir = Mathf.Sign(h);
+            currentYaw += turnRate * Time.deltaTime * dir;
+            targetRoll = -dir * maxRollAngle;
         }
         else
         {
@@ -61,55 +64,57 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 newPosition = rb.position;
+        Vector3 newPos = rb.position;
+
         if (hasGround)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance, groundLayer)
-                || Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance * 2))
-            {
-                float targetHeight = hit.point.y + heightAboveGround;
-                float smoothY;
-                if (heightSmoothTime > 0.001f)
-                    smoothY = Mathf.SmoothDamp(rb.position.y, targetHeight, ref currentHeightVelocity, heightSmoothTime);
-                else
-                    smoothY = targetHeight;
-                smoothY = Mathf.Max(smoothY, hit.point.y + 0.1f);
-                newPosition.y = smoothY;
-            }
+            float targetY = _groundHit.point.y + heightAboveGround;
+            float smoothY = heightSmoothTime > 0.001f
+                ? Mathf.SmoothDamp(rb.position.y, targetY, ref currentHeightVelocity, heightSmoothTime)
+                : targetY;
+            smoothY = Mathf.Max(smoothY, _groundHit.point.y + 0.1f);
+            newPos.y = smoothY;
         }
         else
         {
-            float fallVelocity = rb.velocity.y - gravityForce * Time.fixedDeltaTime;
-            newPosition.y = rb.position.y + fallVelocity * Time.fixedDeltaTime;
-            if (fallVelocity < -30f) fallVelocity = -30f;
-            RaycastHit fallbackHit;
-            if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out fallbackHit, groundCheckDistance * 3))
+            float fallVy = rb.velocity.y - gravityForce * Time.fixedDeltaTime;
+            newPos.y = rb.position.y + fallVy * Time.fixedDeltaTime;
+
+            // 坠落时仍然尝试找回地面
+            if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down,
+                                out RaycastHit hit, groundCheckDistance * 3))
             {
                 hasGround = true;
-                newPosition.y = fallbackHit.point.y + heightAboveGround;
+                _groundHit = hit;
+                newPos.y = hit.point.y + heightAboveGround;
             }
         }
-        Vector3 horizontalMovement = transform.forward * forwardSpeed * Time.fixedDeltaTime;
-        newPosition.x += horizontalMovement.x;
-        newPosition.z += horizontalMovement.z;
-        rb.MovePosition(newPosition);
 
-        float smoothYaw = Mathf.SmoothDampAngle(transform.eulerAngles.y, currentYaw, ref currentYawVelocity, turnSmoothTime);
+        // 水平移动（含加速倍率）
+        Vector3 move = transform.forward * forwardSpeed * _currentBoostMultiplier * Time.fixedDeltaTime;
+        newPos.x += move.x;
+        newPos.z += move.z;
+        rb.MovePosition(newPos);
+
+        // 转向 + 倾斜
+        float smoothYaw = Mathf.SmoothDampAngle(transform.eulerAngles.y, currentYaw,
+                                                ref currentYawVelocity, turnSmoothTime);
         currentRoll = Mathf.SmoothDamp(currentRoll, targetRoll, ref rollVelocity, rollSmoothTime);
         rb.MoveRotation(Quaternion.Euler(0, smoothYaw, 0) * Quaternion.Euler(0, 0, currentRoll));
     }
 
+    /// <summary>检测地面并缓存碰撞信息，供 FixedUpdate 复用。</summary>
     void CheckGround()
     {
-        RaycastHit hit;
-        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance, groundLayer)
-                       || Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance * 2);
-        if (isGrounded)
+        bool grounded = Physics.Raycast(transform.position, Vector3.down, out _groundHit,
+                                         groundCheckDistance, groundLayer)
+                     || Physics.Raycast(transform.position, Vector3.down, out _groundHit,
+                                         groundCheckDistance * 2);
+
+        if (grounded)
         {
-            Debug.DrawLine(transform.position, hit.point, Color.green);
+            Debug.DrawLine(transform.position, _groundHit.point, Color.green);
             hasGround = true;
-            lastGroundTime = Time.time;
         }
         else
         {
@@ -125,10 +130,11 @@ public class MovementController : MonoBehaviour
         rb.MoveRotation(Quaternion.identity);
     }
 
+#if UNITY_EDITOR
     void OnGUI()
     {
         GUIStyle style = new GUIStyle { fontSize = 20, normal = { textColor = Color.white } };
-        string s = hasGround ? $"✅ 贴地 {transform.position.y:F1}" : "❌ 坠落中";
+        string s = hasGround ? $"\u2705 贴地 {transform.position.y:F1}" : "\u274c 坠落中";
         GUI.Label(new Rect(20, 55, 300, 30), s, style);
     }
 
@@ -138,6 +144,38 @@ public class MovementController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position + Vector3.down * groundCheckDistance, 0.2f);
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
     }
+#endif
 
-    public void ResetSpeedMultiplier() { }
+    // ====================================================================
+    //  加速 / 减速 接口
+    // ====================================================================
+
+    /// <summary>
+    /// 施加一个持续 duration 秒的速度倍率（由 SpeedBoost 等外部脚本调用）。
+    /// multiplier > 1 为加速，&lt; 1 为减速，= 1 为正常速度。
+    /// 多人模式下仅在本地客户端调用，加速后的移动通过 CarSync 自动同步。
+    /// </summary>
+    public void ApplyBoost(float multiplier, float duration)
+    {
+        if (_boostCoroutine != null)
+            StopCoroutine(_boostCoroutine);
+        _boostCoroutine = StartCoroutine(BoostRoutine(multiplier, duration));
+    }
+
+    private IEnumerator BoostRoutine(float multiplier, float duration)
+    {
+        _currentBoostMultiplier = multiplier;
+        yield return new WaitForSeconds(duration);
+        _currentBoostMultiplier = 1f;
+        _boostCoroutine = null;
+    }
+
+    /// <summary>立即取消所有加速效果，恢复原始速度。</summary>
+    public void ResetSpeedMultiplier()
+    {
+        if (_boostCoroutine != null)
+            StopCoroutine(_boostCoroutine);
+        _currentBoostMultiplier = 1f;
+        _boostCoroutine = null;
+    }
 }

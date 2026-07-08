@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4091148166574130128}
   - component: {fileID: 4041162634866446981}
   - component: {fileID: 3275751474853768687}
+  - component: {fileID: 7169619636743738218}
+  - component: {fileID: 1904493691798691402}
   m_Layer: 0
   m_Name: asteroid_mod_01_low
   m_TagString: Untagged
@@ -195,3 +197,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7169619636743738218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236349573609145378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65b8cd73f6f5764c833795ac185539c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatHeight: 0.5
+  floatSpeed: 1.5
+  rotateSpeed: 30
+--- !u!114 &1904493691798691402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236349573609145378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a2745e21780694291286548279cbb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

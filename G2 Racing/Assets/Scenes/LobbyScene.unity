@@ -5886,6 +5886,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438516555}
   m_CullTransparentMesh: 0
+--- !u!1 &1439113820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1439113822}
+  - component: {fileID: 1439113821}
+  m_Layer: 0
+  m_Name: Networkmanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1439113821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439113820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9070c259c1d60f746b2be02f152ea4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoginUIPanel: {fileID: 1898342735}
+  PlayerNameInput: {fileID: 237746957}
+  ConnectingInfoUIPanel: {fileID: 751703433}
+  GameOptionsUIPanel: {fileID: 1897633495}
+  CreateRoomUIPanel: {fileID: 274552716}
+  RoomNameInputField: {fileID: 983598366}
+  GameMode: 
+  CreatingRoomInfoUIPanel: {fileID: 346571420}
+  InsideRoomUIPanel: {fileID: 1598625407}
+  RoomInfoText: {fileID: 314537884}
+  PlayerListPrefab: {fileID: 244169819}
+  PlayerListContent: {fileID: 0}
+  StartGameButton: {fileID: 1279214256}
+  GameModeText: {fileID: 0}
+  PanelBackground: {fileID: 0}
+  RacingBackground: {fileID: 0}
+  DeathRaceBackground: {fileID: 0}
+  JoinRandomRoomUIPanel: {fileID: 1438516555}
+--- !u!4 &1439113822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439113820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 489.33337, y: 253.33334, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455859397
 GameObject:
   m_ObjectHideFlags: 0
@@ -6551,7 +6613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1598625408
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7727,7 +7789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1898342736
 RectTransform:
   m_ObjectHideFlags: 0
