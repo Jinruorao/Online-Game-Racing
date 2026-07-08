@@ -17,6 +17,9 @@ public class Shield : MonoBehaviourPunCallbacks
     void Start()
     {
         pv = GetComponent<PhotonView>();
+        // 兜底：往父级找
+        if (pv == null) pv = GetComponentInParent<PhotonView>();
+
         shieldRenderer = GetComponent<Renderer>();
 
         if (respawnSystem == null)
@@ -29,7 +32,8 @@ public class Shield : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if (!pv.IsMine) return;
+        // ★ 关键修复：pv 可能为 null
+        if (pv == null || !pv.IsMine) return;
 
         // 护盾计时（过期自动消失）
         if (isShieldActive)
@@ -83,14 +87,13 @@ public class Shield : MonoBehaviourPunCallbacks
         }
 
         Debug.Log("💥🛡️ 护盾挡住了撞击！");
-        // 保证所有客户端关闭护盾
         if (pv != null && pv.IsMine)
         {
             pv.RPC("RPC_DeactivateShield", RpcTarget.All);
         }
-        else if (pv != null)
+        else
         {
-            // 如果本地不是 Owner，也要本地关闭视觉
+            // 本地直接关闭视觉
             isShieldActive = false;
             SetShieldVisible(false);
         }

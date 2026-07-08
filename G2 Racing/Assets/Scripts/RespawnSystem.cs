@@ -28,6 +28,7 @@ public class RespawnSystem : MonoBehaviourPunCallbacks
     void Start()
     {
         pv = GetComponent<PhotonView>();
+        if (pv == null) pv = GetComponentInParent<PhotonView>();
 
         if (rb == null) rb = GetComponent<Rigidbody>();
         if (movementController == null) movementController = GetComponent<MovementController>();
@@ -59,6 +60,7 @@ public class RespawnSystem : MonoBehaviourPunCallbacks
 
     void FixedUpdate()
     {
+        // FixedUpdate 里已经有 null 判断
         if (isRespawning && pv != null && pv.IsMine)
         {
             rb.velocity = Vector3.zero;
@@ -122,7 +124,6 @@ public class RespawnSystem : MonoBehaviourPunCallbacks
     {
         if (isRespawning) return;
 
-        // 计算目标位置
         Vector3 targetPosition = GetPositionAtTime(historyDuration);
 
         Debug.Log($"🔍 获取历史位置... 历史总数：{positionHistory.Count}");
@@ -143,30 +144,22 @@ public class RespawnSystem : MonoBehaviourPunCallbacks
 
         Debug.Log($"📍 回溯目标位置：{targetPosition}");
 
-        // Owner 端通过网络 RPC 同步重生
         if (pv != null)
         {
             pv.RPC("RPC_DoRespawn", RpcTarget.All, targetPosition);
         }
         else
         {
-            // 没有 PhotonView 回退本地执行
             ExecuteRespawn(targetPosition);
         }
     }
 
-    /// <summary>
-    /// RPC：所有客户端执行重生效果
-    /// </summary>
     [PunRPC]
     void RPC_DoRespawn(Vector3 targetPosition)
     {
         ExecuteRespawn(targetPosition);
     }
 
-    /// <summary>
-    /// 实际执行重生逻辑（本地 + 网络调用统一入口）
-    /// </summary>
     void ExecuteRespawn(Vector3 targetPosition)
     {
         isRespawning = true;
@@ -179,7 +172,6 @@ public class RespawnSystem : MonoBehaviourPunCallbacks
             movementController.enabled = false;
         }
 
-        // Owner 端直接设置物理位置
         if (rb != null)
         {
             rb.MovePosition(targetPosition);
@@ -197,7 +189,7 @@ public class RespawnSystem : MonoBehaviourPunCallbacks
             movementController.ResetSpeedMultiplier();
         }
 
-        Debug.Log($"💥 触发回溯！回到 位置 {targetPosition}");
+        Debug.Log($"💥 触发回溯！回到位置 {targetPosition}");
     }
 
     Vector3 GetPositionAtTime(float secondsAgo)
@@ -229,7 +221,8 @@ public class RespawnSystem : MonoBehaviourPunCallbacks
 
     void OnCollisionEnter(Collision collision)
     {
-        if (!pv.IsMine) return; // 只有 Owner 才能触发碰撞重生
+        // ★ 修复：pv 可能为 null
+        if (pv == null || !pv.IsMine) return;
 
         Debug.Log($"💥 碰撞检测到：{collision.gameObject.name}，Tag: {collision.gameObject.tag}");
 

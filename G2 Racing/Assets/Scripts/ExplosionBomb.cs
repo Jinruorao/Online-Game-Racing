@@ -23,11 +23,14 @@ public class ExplosionBomb : MonoBehaviourPunCallbacks
     void Start()
     {
         pv = GetComponent<PhotonView>();
+        // 兜底：如果自己身上没有，往父级找
+        if (pv == null) pv = GetComponentInParent<PhotonView>();
     }
 
     void Update()
     {
-        if (!pv.IsMine) return;
+        // ★ 关键修复：pv 可能为 null（Prefab 还没挂 PhotonView）
+        if (pv == null || !pv.IsMine) return;
 
         // 更新冷却计时
         if (isOnCooldown)
@@ -82,15 +85,20 @@ public class ExplosionBomb : MonoBehaviourPunCallbacks
             StartCooldown();
 
             PhotonView targetPV = nearestEnemy.GetComponent<PhotonView>();
+            if (targetPV == null) targetPV = nearestEnemy.GetComponentInParent<PhotonView>();
+
             if (targetPV != null)
             {
-                // 通过网络 RPC 在所有客户端上执行攻击效果
                 pv.RPC("RPC_AttackTarget", RpcTarget.All, targetPV.ViewID);
+            }
+            else
+            {
+                Debug.LogWarning("目标玩家没有 PhotonView，无法发动网络攻击！");
             }
         }
         else
         {
-            Debug.Log("❌ No enemy in front!");
+            Debug.Log("❌ 前方没有敌人！");
         }
     }
 
@@ -102,7 +110,7 @@ public class ExplosionBomb : MonoBehaviourPunCallbacks
 
         GameObject target = targetPV.gameObject;
 
-        // 显示火焰特效（每个客户端本地生成，不需要网络同步）
+        // 显示火焰特效（每个客户端本地生成即可）
         if (flameEffectPrefab != null)
         {
             Vector3 spawnPos = target.transform.position + Vector3.up * 2f;
@@ -134,7 +142,7 @@ public class ExplosionBomb : MonoBehaviourPunCallbacks
             respawn.TriggerRespawn();
         }
 
-        Debug.Log($"💥 Attacked {target.name} via network!");
+        Debug.Log($"💥 通过网络攻击了 {target.name}！");
     }
 
     void StartCooldown()
