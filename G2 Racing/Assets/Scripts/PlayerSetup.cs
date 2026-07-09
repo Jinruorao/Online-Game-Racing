@@ -10,17 +10,13 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
     /// <summary>本地玩家实例（静态引用，方便其他组件访问）</summary>
     public static GameObject LocalPlayerInstance { get; private set; }
 
-    // Start is called before the first frame update
     void Start()
     {
         if (photonView.IsMine)
         {
             LocalPlayerInstance = gameObject;
 
-            // 启用本地玩家控制脚本（CarMovement + MovementController 兼容）
-            CarMovement carMove = GetComponent<CarMovement>();
-            if (carMove != null) carMove.enabled = true;
-
+            // 启用 MovementController（新移动系统）
             MovementController movementCtrl = GetComponent<MovementController>();
             if (movementCtrl != null) movementCtrl.enabled = true;
 
@@ -34,7 +30,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
                 pv.Synchronization = ViewSynchronization.UnreliableOnChange;
             }
 
-            // 确保 CarSync 已挂载（由 Prefab 设计时添加，此处只做检查）
+            // 确保 CarSync 已挂载
             if (GetComponent<CarSync>() == null)
             {
                 Debug.LogWarning("[PlayerSetup] 建议在 Player Prefab 上挂载 CarSync 组件以获得最佳同步效果。");
@@ -42,10 +38,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
         }
         else
         {
-            // Remote player: 禁用所有本地控制脚本
-            CarMovement carMove = GetComponent<CarMovement>();
-            if (carMove != null) carMove.enabled = false;
-
+            // Remote player: 禁用 MovementController
             MovementController movementCtrl = GetComponent<MovementController>();
             if (movementCtrl != null) movementCtrl.enabled = false;
 
@@ -53,11 +46,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() { }
 
     private void OnDestroy()
     {

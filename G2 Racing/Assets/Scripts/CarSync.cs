@@ -39,7 +39,7 @@ public class CarSync : MonoBehaviour, IPunObservable
 
     private void Start()
     {
-        if (pv.IsMine)
+        if (pv == null || pv.IsMine)
         {
             // Owner: 初始化同步缓存为本地值
             networkPosition = transform.position;
@@ -57,17 +57,19 @@ public class CarSync : MonoBehaviour, IPunObservable
 
     private void FixedUpdate()
     {
-        if (!pv.IsMine)
+        // 离线模式（无 Photon）或 Observer 端才进入插值
+        if (pv == null || !PhotonNetwork.IsConnected || !pv.IsMine)
         {
-            // Observer: 平滑插值到网络位置
+            // 平滑插值到网络位置
             rb.position = Vector3.Lerp(rb.position, networkPosition, positionSmoothSpeed * Time.fixedDeltaTime);
-            rb.rotation = Quaternion.Slerp(rb.rotation, networkRotation, rotationSmoothSpeed * Time.fixedDeltaTime);
+            // ★ 关键修复：归一化四元数，防止 "Rotation quaternions must be unit length"
+            rb.rotation = Quaternion.Slerp(rb.rotation, networkRotation.normalized, rotationSmoothSpeed * Time.fixedDeltaTime);
 
-            if (syncVelocity)
+            if (syncVelocity && networkVelocity != Vector3.zero)
             {
                 rb.velocity = networkVelocity;
             }
-            if (syncAngularVelocity)
+            if (syncAngularVelocity && networkAngularVelocity != Vector3.zero)
             {
                 rb.angularVelocity = networkAngularVelocity;
             }
@@ -124,10 +126,11 @@ public class CarSync : MonoBehaviour, IPunObservable
     /// </summary>
     public void TeleportToNetworkPosition()
     {
-        if (!pv.IsMine)
+        if (pv == null || !pv.IsMine)
         {
             rb.position = networkPosition;
             rb.rotation = networkRotation;
         }
     }
 }
+

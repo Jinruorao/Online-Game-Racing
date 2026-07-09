@@ -1,47 +1,47 @@
 ﻿using UnityEngine;
-using Photon.Pun;
 
-public class Shield : MonoBehaviourPunCallbacks
+public class Shield : MonoBehaviour
 {
     [Header("=== 护盾参数 ===")]
-    public float shieldDuration = 5f;
+    public float shieldDuration = 5f;           // 护盾持续秒数（过期自动消失）
 
     [Header("=== 引用 ===")]
     public RespawnSystem respawnSystem;
 
+    // 护盾状态
     private bool isShieldActive = false;
     private float shieldTimer = 0f;
+
+    // 视觉引用
     private Renderer shieldRenderer;
-    private PhotonView pv;
+    private Color shieldColor;
 
     void Start()
     {
-        pv = GetComponent<PhotonView>();
-        // 兜底：往父级找
-        if (pv == null) pv = GetComponentInParent<PhotonView>();
-
         shieldRenderer = GetComponent<Renderer>();
+        if (shieldRenderer != null)
+        {
+            shieldColor = shieldRenderer.material.color;
+        }
 
         if (respawnSystem == null)
         {
             respawnSystem = GetComponentInParent<RespawnSystem>();
         }
 
+        // 默认隐藏护盾
         SetShieldVisible(false);
     }
 
     void Update()
     {
-        // ★ 关键修复：pv 可能为 null
-        if (pv == null || !pv.IsMine) return;
-
         // 护盾计时（过期自动消失）
         if (isShieldActive)
         {
             shieldTimer -= Time.deltaTime;
             if (shieldTimer <= 0f)
             {
-                pv.RPC("RPC_DeactivateShield", RpcTarget.All);
+                DeactivateShield();
                 Debug.Log("⏰ 护盾过期自动消失");
             }
         }
@@ -49,12 +49,12 @@ public class Shield : MonoBehaviourPunCallbacks
         // 按 E 激活护盾
         if (Input.GetKeyDown(KeyCode.E))
         {
-            pv.RPC("RPC_ActivateShield", RpcTarget.All);
+            ActivateShield();
         }
     }
 
-    [PunRPC]
-    void RPC_ActivateShield()
+    // === 激活护盾 ===
+    public void ActivateShield()
     {
         if (isShieldActive)
         {
@@ -68,17 +68,15 @@ public class Shield : MonoBehaviourPunCallbacks
         Debug.Log($"🛡️ 护盾激活！持续 {shieldDuration} 秒");
     }
 
-    [PunRPC]
-    void RPC_DeactivateShield()
+    // === 停用护盾 ===
+    public void DeactivateShield()
     {
         isShieldActive = false;
         SetShieldVisible(false);
         Debug.Log("🛡️ 护盾已消失");
     }
 
-    /// <summary>
-    /// 护盾阻挡撞击（由 RespawnSystem 调用）
-    /// </summary>
+    // === 护盾阻挡撞击（由 RespawnSystem 调用） ===
     public bool TryBlockHit()
     {
         if (!isShieldActive)
@@ -86,20 +84,13 @@ public class Shield : MonoBehaviourPunCallbacks
             return false;
         }
 
+        // 挡住撞击，护盾立即消失
         Debug.Log("💥🛡️ 护盾挡住了撞击！");
-        if (pv != null && pv.IsMine)
-        {
-            pv.RPC("RPC_DeactivateShield", RpcTarget.All);
-        }
-        else
-        {
-            // 本地直接关闭视觉
-            isShieldActive = false;
-            SetShieldVisible(false);
-        }
+        DeactivateShield();
         return true;
     }
 
+    // === 显示/隐藏护盾 ===
     void SetShieldVisible(bool visible)
     {
         if (shieldRenderer != null)
@@ -108,6 +99,7 @@ public class Shield : MonoBehaviourPunCallbacks
         }
     }
 
+    // === 获取护盾状态 ===
     public bool IsShieldActive()
     {
         return isShieldActive;

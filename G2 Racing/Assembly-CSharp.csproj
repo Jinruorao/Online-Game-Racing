@@ -76,7 +76,9 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
     <Compile Include="Assets\Scripts\PlayerSelection.cs" />
     <Compile Include="Assets\Script_Lan\SpeedBoost.cs" />
+    <Compile Include="Assets\Scripts\RacingPlayer.cs" />
     <Compile Include="Assets\Scripts\NetworkedRaceManager.cs" />
+    <Compile Include="Assets\Scripts\RaceFinishManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\BreakableAsteroids\Scripts\Fracture.cs" />
     <Compile Include="Assets\Scripts\RacingModeGameManager.cs" />
@@ -93,7 +95,10 @@
     <Compile Include="Assets\Scripts\MultiplayerRacingGame.cs" />
     <Compile Include="Assets\SpaceSkies Free\Demo\Scripts\SkyboxChanger.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
+    <Compile Include="Assets\Scripts\SpeedUpRacePlayer.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
+    <Compile Include="Assets\Scripts\backtoscene.cs" />
+    <Compile Include="Assets\Script_Lan\TestJudge.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

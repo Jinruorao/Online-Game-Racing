@@ -50,6 +50,8 @@ MonoBehaviour:
   - RPC_SetTime
   - RPC_StartTheRace
   - RPC_UpdateLap
+  - RPC_RegisterFinish
+  - RPC_ShowResults
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

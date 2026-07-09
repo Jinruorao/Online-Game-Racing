@@ -92,10 +92,14 @@ public class NetworkedRaceManager : MonoBehaviourPunCallbacks
         }
     }
 
-    void FinishRace()
+    public void FinishRace()
     {
         if (raceFinished) return;
         raceFinished = true;
+
+        // 通知 RaceFinishManager
+        if (RaceFinishManager.Instance != null)
+            RaceFinishManager.Instance.ReportFinish(PhotonNetwork.LocalPlayer.NickName);
 
         float raceTime = Time.time - raceStartTime;
 
@@ -153,3 +157,4 @@ public class NetworkedRaceManager : MonoBehaviourPunCallbacks
         orderedTriggers = orderedTriggersList;
     }
 }
+
